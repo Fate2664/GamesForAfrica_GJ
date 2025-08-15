@@ -19,8 +19,10 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
-        Vector3 viewDir = player.position - new Vector3(transform.position.x, player.position.y, transform.position.z);
-        orientation.forward = viewDir.normalized;
+        Vector3 camForward = transform.forward;
+        camForward.y = 0f;
+        camForward.Normalize();
+        orientation.forward = camForward;
 
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");

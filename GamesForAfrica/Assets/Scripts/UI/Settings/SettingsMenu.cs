@@ -34,16 +34,23 @@ public class SettingsMenu : MonoBehaviour
         Root.AddGestureHandler<Gesture.OnPress, DropDownVisuals>(DropDownVisuals.HandlePress);
         Root.AddGestureHandler<Gesture.OnRelease, DropDownVisuals>(DropDownVisuals.HandleRelease);
 
+        Root.AddGestureHandler<Gesture.OnHover, KeyBindVisuals>(KeyBindVisuals.HandleHover);
+        Root.AddGestureHandler<Gesture.OnUnhover, KeyBindVisuals>(KeyBindVisuals.HandleUnhover);
+        Root.AddGestureHandler<Gesture.OnPress, KeyBindVisuals>(KeyBindVisuals.HandlePress);
+        Root.AddGestureHandler<Gesture.OnRelease, KeyBindVisuals>(KeyBindVisuals.HandleRelease);
+
         //State Changing
         SettingsList.AddGestureHandler<Gesture.OnClick, ToggleVisuals>(HandleToggleClick);
         SettingsList.AddGestureHandler<Gesture.OnDrag, SliderVisuals>(HandleSliderDragged);
         SettingsList.AddGestureHandler<Gesture.OnClick, DropDownVisuals>(HandleDropDownClick);
+        SettingsList.AddGestureHandler<Gesture.OnClick, KeyBindVisuals>(HandleKeyBindClick);
 
         //Data Binding
         SettingsList.AddDataBinder<BoolSetting, ToggleVisuals>(BindToggle);
         SettingsList.AddDataBinder<FloatSetting, SliderVisuals>(BindSlider);
         SettingsList.AddDataBinder<MultiOptionSetting, DropDownVisuals>(BindDropDown);
         SettingsList.AddDataBinder<ResolutionSetting, DropDownVisuals>(BindResolution);
+        SettingsList.AddDataBinder<KeybindSetting, KeyBindVisuals>(BindKeyBind);
 
         //Tabs
         TabBar.AddDataBinder<SettingsCollection, TabButtonVisuals>(BindTab);
@@ -62,6 +69,7 @@ public class SettingsMenu : MonoBehaviour
 
     }
 
+   
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
@@ -146,6 +154,10 @@ public class SettingsMenu : MonoBehaviour
         setting.state = !setting.state;
         target.IsChecked = setting.state;
     }
+    private void HandleKeyBindClick(Gesture.OnClick evt, KeyBindVisuals target, int index)
+    {
+        throw new NotImplementedException();
+    }
 
     #endregion
 
@@ -202,6 +214,11 @@ public class SettingsMenu : MonoBehaviour
         visuals.label.Text = setting.Name;
         visuals.SelectedLabel.Text = setting.Options[setting.selectedIndex];
         visuals.Collapse();
+    }
+
+    private void BindKeyBind(Data.OnBind<KeybindSetting> evt, KeyBindVisuals target, int index)
+    {
+        throw new NotImplementedException();
     }
 
     #endregion
