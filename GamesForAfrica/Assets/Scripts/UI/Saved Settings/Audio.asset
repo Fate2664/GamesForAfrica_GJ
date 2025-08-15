@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b3c22a3b098594796f588efd03f2b5, type: 3}
+  m_Name: Audio
+  m_EditorClassIdentifier: 
+  Category: Audio
+  Settings:
+  - rid: 7332598407519797419
+  - rid: 7332598407519797420
+  - rid: 7332598407519797421
+  - rid: 2005466507359289424
+  references:
+    version: 2
+    RefIds:
+    - rid: 2005466507359289424
+      type: {class: FloatSetting, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Effects
+        Name: Effects
+        Order: 3
+        Type: 0
+        _value: 50
+        Min: 0
+        Max: 100
+        ValueFormat: '{0:0}'
+        DefaultValue: 50
+    - rid: 7332598407519797419
+      type: {class: FloatSetting, ns: , asm: Assembly-CSharp}
+      data:
+        Key: MasterVolume
+        Name: Master Volume
+        Order: 0
+        Type: 0
+        _value: 50
+        Min: 0
+        Max: 100
+        ValueFormat: '{0:0}'
+        DefaultValue: 50
+    - rid: 7332598407519797420
+      type: {class: FloatSetting, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Menu
+        Name: Menu
+        Order: 1
+        Type: 0
+        _value: 50
+        Min: 0
+        Max: 100
+        ValueFormat: '{0:0}'
+        DefaultValue: 50
+    - rid: 7332598407519797421
+      type: {class: FloatSetting, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Music
+        Name: Music
+        Order: 2
+        Type: 0
+        _value: 50
+        Min: 0
+        Max: 100
+        ValueFormat: '{0:0}'
+        DefaultValue: 50
