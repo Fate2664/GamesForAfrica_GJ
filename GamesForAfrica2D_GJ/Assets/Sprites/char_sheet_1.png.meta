@@ -106,67 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerWalk
+      name: PlayerWalk1
       rect:
         serializedVersion: 2
-        x: 3
+        x: 4
         y: 0
-        width: 24
-        height: 31
+        width: 22
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ffb3fbb01da984940800000000000000
-      internalID: 5280640785727831039
+      spriteID: 3ee4740d74654fb4781bea5b20052d73
+      internalID: 1316982425
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_sheet_1_1
+      name: PlayerWalk2
       rect:
         serializedVersion: 2
-        x: 35
+        x: 36
         y: 0
-        width: 24
-        height: 31
+        width: 22
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4d73460c31d5aa1f0800000000000000
-      internalID: -1032910825114552364
+      spriteID: 5fe37c01ba361bc4e87c19ad9c440d20
+      internalID: -1090117211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_sheet_1_2
+      name: PlayerWalk3
       rect:
         serializedVersion: 2
-        x: 67
+        x: 68
         y: 0
-        width: 24
-        height: 31
+        width: 22
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 74968c260d5bf38c0800000000000000
-      internalID: -4017292435976066745
+      spriteID: cfcdc5ec6f58c11448b064cecae384c1
+      internalID: -910088366
       vertices: []
       indices: 
       edges: []
@@ -185,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PlayerWalk: 5280640785727831039
+      PlayerWalk1: 1316982425
+      PlayerWalk2: -1090117211
+      PlayerWalk3: -910088366
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
