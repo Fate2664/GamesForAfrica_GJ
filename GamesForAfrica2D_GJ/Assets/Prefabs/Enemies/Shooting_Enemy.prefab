@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4359405320185728961}
   - component: {fileID: 2842720675999601287}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: enemy_2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.06, y: -0.62, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7721097177960101532}
@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 8124651700770348539}
   - component: {fileID: 8539761896089730744}
   - component: {fileID: 2202666626619205836}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: LookRange
   m_TagString: AttackRange
   m_Icon: {fileID: 0}
@@ -192,10 +192,9 @@ GameObject:
   - component: {fileID: 2576996243794536284}
   - component: {fileID: 819896490155482573}
   - component: {fileID: 3537516546931900599}
-  - component: {fileID: 6413102143289377979}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Shooting_Enemy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,8 +250,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.7986173, y: -0.65064645}
-  m_Size: {x: 0.58236873, y: 0.8600178}
+  m_Offset: {x: 0.1799565, y: -0.7798176}
+  m_Size: {x: 1.8196903, y: 2.5596352}
   m_Direction: 0
 --- !u!114 &2576996243794536284
 MonoBehaviour:
@@ -294,7 +293,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f908e1afd51ea4e9465e732ca8cb64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  target: {fileID: 0}
+  speed: 244
   nextWaypointDistance: 1
 --- !u!50 &3537516546931900599
 Rigidbody2D:
@@ -309,7 +309,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 1
+  m_LinearDamping: 0.36
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 9cf206e003e27244ca4cef8c6d63bc10, type: 2}
@@ -323,16 +323,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6413102143289377979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6788955611648209837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94409cdeee244bc4294ddc4d14bf4a83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHP: 50
