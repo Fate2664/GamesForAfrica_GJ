@@ -36,6 +36,7 @@ public class Projectile : MonoBehaviour
             if (damageable != null)
             {
                 damageable.TakeDamage(damage, attackDirection);
+                damageable.ApplyKnockback(attackDirection, 5f);
             }
             DestroyProjectile();
         }

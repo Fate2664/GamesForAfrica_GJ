@@ -2719,6 +2719,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6413102143289377979, guid: 24cf13c8ea54fc343be4e2a2515c3d85, type: 3}
+      propertyPath: playerStats
+      value: 
+      objectReference: {fileID: 1200429961}
+    - target: {fileID: 6413102143289377979, guid: 24cf13c8ea54fc343be4e2a2515c3d85, type: 3}
       propertyPath: deathParticles
       value: 
       objectReference: {fileID: 2148263299724491560, guid: b97c04f4fb15ab748b927d3a0c666664, type: 3}

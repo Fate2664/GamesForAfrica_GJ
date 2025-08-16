@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class PlayerStats : MonoBehaviour, IDamageable
+public class PlayerStats : MonoBehaviour
 {
     [Header("Player Stats")]
     [SerializeField] private float moveSpeed = 3f;
@@ -66,4 +66,5 @@ public class PlayerStats : MonoBehaviour, IDamageable
             Die();
         }
     }
+
 }
