@@ -31,6 +31,13 @@ public class WaveManager : MonoBehaviour
                 enemySpawner.SpawnEnemy();
                 yield return new WaitForSeconds(timeBetweenSpawns);
             }
+
+            spawning = false;
+            currentWave++;
+            if (currentWave < enemiesPerWave.Length)
+            {
+                yield return new WaitForSeconds(timeBetweenWaves);
+            }
         }
     }
 }
