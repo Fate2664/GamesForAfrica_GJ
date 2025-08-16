@@ -28,13 +28,14 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Debug.Log("Hit something");
+        
         if (collision.collider.CompareTag("Enemy"))
         {
-            Enemy enemy = collision.collider.GetComponent<Enemy>();
-            if (enemy != null)
+            IDamageable damageable = collision.collider.GetComponent<IDamageable>();
+            Vector2 attackDirection = (collision.transform.position - transform.position).normalized;
+            if (damageable != null)
             {
-                enemy.TakeDamage(damage);
+                damageable.TakeDamage(damage, attackDirection);
             }
             DestroyProjectile();
         }

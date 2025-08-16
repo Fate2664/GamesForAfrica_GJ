@@ -4,7 +4,8 @@ using UnityEngine;
 public class WaveManager : MonoBehaviour
 {
     [Header("Wave Settings")]
-    public int[] enemiesPerWave;
+    [Tooltip("Number of enemies to spawn in each wave. The length of this array determines the number of waves.")]
+    public int[] enemiesPerWave; 
     public float timeBetweenWaves = 5f;
     public float timeBetweenSpawns = 1f;
 
@@ -23,21 +24,27 @@ public class WaveManager : MonoBehaviour
     {
         while (currentWave < enemiesPerWave.Length)
         {
-            spawning = true;
-            int enemiesToSpawn = enemiesPerWave[currentWave];
+            Debug.Log($"Starting Wave {currentWave + 1}");
 
+            int enemiesToSpawn = enemiesPerWave[currentWave];
             for (int i = 0; i < enemiesToSpawn; i++)
             {
+                Debug.Log($"Spawning enemy {i + 1}/{enemiesToSpawn} in wave {currentWave + 1}");
                 enemySpawner.SpawnEnemy();
                 yield return new WaitForSeconds(timeBetweenSpawns);
             }
 
-            spawning = false;
+            Debug.Log($"Wave {currentWave + 1} complete");
+
             currentWave++;
             if (currentWave < enemiesPerWave.Length)
             {
+                Debug.Log($"Waiting {timeBetweenWaves} seconds before next wave...");
                 yield return new WaitForSeconds(timeBetweenWaves);
             }
         }
+        
+        Debug.Log("All waves finished!");
     }
+
 }
