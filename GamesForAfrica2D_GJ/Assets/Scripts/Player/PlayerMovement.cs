@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    public PlayerStats BaseStats;
     public PlayerStats CurrentStats;
     private float LastAttackTime;
     public Projectile BulletPrefab;
@@ -110,6 +110,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void ResetStats()
     {
-        CurrentStats = GetComponent<PlayerStats>();
+        CurrentStats = BaseStats;
     }
 }
