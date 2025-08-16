@@ -6,7 +6,6 @@ public class Projectile : MonoBehaviour
     public float damage = 5f;
     public float maxDistance = 5f;
     public Vector2 direction;
-
     private Vector2 spawnPosition;
     private float distanceTraveled = 0f;
 

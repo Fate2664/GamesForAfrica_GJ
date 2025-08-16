@@ -2,28 +2,20 @@ using System.Linq;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.UIElements;
-public class PlayerStats
-{
-    public float health = 100f;
-    public float maxHealth = 100f;
-    public float moveSpeed = 5f;
-    public float attackDamage = 10f;
-    public float attackRange = 2f;
-    public float attackSpeed = 1f;
-    public float bullets= 3f;
-    public float bulletSpeed=5f;
-    public float spreadAngle = 30f;
-}
+
 public class PlayerMovement : MonoBehaviour
 {
-    public PlayerStats DefaultStats;
+
     public PlayerStats CurrentStats;
     private float LastAttackTime;
     public Projectile BulletPrefab;
+    private Vector2 movementInput;
 
     private void Awake()
     {
         ResetStats();
+        LastAttackTime = 0;
+
     }
     void Start()
     {
@@ -31,27 +23,66 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Attack();
+        GetInput();
+        Debug.DrawRay(transform.position, Vector2.right * CurrentStats.attackRange, Color.red, 1f);
     }
 
-
+    void GetInput()
+    {
+        movementInput.x = Input.GetAxisRaw("Horizontal");
+        movementInput.y = Input.GetAxisRaw("Vertical");
+        if (movementInput.magnitude > 1f)
+        {
+            movementInput.Normalize();
+        }
+    }
+    private void FixedUpdate()
+    {
+        GetInput();
+        Move();
+        Attack();
+    }
+    private void Move()
+    {
+        Vector3 movement = new Vector3(movementInput.x, movementInput.y, 0f) * CurrentStats.moveSpeed * Time.deltaTime;
+        transform.Translate(movement,Space.World);
+    }
     void Attack()
     {
         if (Time.time - LastAttackTime >= 1f / CurrentStats.attackSpeed)
         {
+            //Debug.Log("LookingForTarget");
             FindTarget();
+            LastAttackTime = Time.time;
         }
 
     }
+
     void FindTarget()
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, CurrentStats.attackRange);
-        Enemy closestEnemy = hits
-        .Where(h => h.CompareTag("Enemy"))
-        .Select(h => h.GetComponent<Enemy>())
-        .OrderBy(e => Vector3.Distance(transform.position, e.transform.position))
-        .FirstOrDefault();
-        Shoot(closestEnemy.transform.position);
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        if (enemies.Length == 0)
+        {
+            Debug.Log("No enemies");
+            return;
+        }
+        GameObject nearestEnemy = null;
+        float closestDistance = Mathf.Infinity;
+
+        foreach (GameObject enemy in enemies)
+        {
+            float distance = Vector2.Distance(transform.position, enemy.transform.position);
+            if (distance < CurrentStats.attackRange && distance < closestDistance)
+            {
+                closestDistance = distance;
+                nearestEnemy = enemy;
+            }
+        }
+
+        if (nearestEnemy != null&&closestDistance<=CurrentStats.attackRange)
+        {
+            Shoot(nearestEnemy.transform.position);
+        }
     }
     void Shoot(Vector3 target)
     {
@@ -77,8 +108,8 @@ public class PlayerMovement : MonoBehaviour
             projScript.maxDistance = CurrentStats.attackRange;
         }
     }
-        void ResetStats()
+    void ResetStats()
     {
-            CurrentStats = DefaultStats;
+        CurrentStats = GetComponent<PlayerStats>();
     }
 }
