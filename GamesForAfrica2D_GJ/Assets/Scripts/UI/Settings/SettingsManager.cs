@@ -68,6 +68,7 @@ public class SettingsManager : MonoBehaviour
                     Debug.Log("Duplicate setting key found");
                 }
             }
+            
         }
     }
 

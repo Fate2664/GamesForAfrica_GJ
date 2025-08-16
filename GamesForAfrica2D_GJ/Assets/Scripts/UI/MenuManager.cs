@@ -16,7 +16,6 @@ public class MenuManager : MonoBehaviour
     //This script manages the main menu
     public void StartGame()
     {
-        AudioManager.Instance?.PlaySFX("GameplayMusic");
         AudioManager.Instance?.StopSFX("MenuMusic");
         SceneManager.LoadScene("Level 1");
     }
@@ -27,18 +26,12 @@ public class MenuManager : MonoBehaviour
     }
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Menu");
     }
     public void LoadSettingsMenu()
     {
-        SceneManager.LoadScene("SettingsScreen");
+        SceneManager.LoadScene("Settings");
     }
-
-    public void LoadLeaderboard()
-    {
-        SceneManager.LoadScene("LeaderBoard");
-    }
-
 
 
 }
