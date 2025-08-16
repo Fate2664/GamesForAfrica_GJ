@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    float HP;
     public float MaxHP;
+    float HP;
     public float Speed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         HP -= damage;
+        Debug.Log("Hit!");
     }
     public void Die()
     {

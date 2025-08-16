@@ -26,19 +26,16 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.CompareTag("Enemy"))
+        //Debug.Log("Hit something");
+        if (collision.collider.CompareTag("Enemy"))
         {
-            Enemy enemy = other.GetComponent<Enemy>();
+            Enemy enemy = collision.collider.GetComponent<Enemy>();
             if (enemy != null)
             {
                 enemy.TakeDamage(damage);
             }
-            DestroyProjectile();
-        }
-        else if (!other.isTrigger)
-        { 
             DestroyProjectile();
         }
     }

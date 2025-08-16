@@ -4007,13 +4007,16 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7127650670968432757, guid: 2dd4a3ec74ff8c84faee20f8416fc906, type: 3}
   m_PrefabInstance: {fileID: 6372220028396699251}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &1064929629
-CapsuleCollider:
+--- !u!70 &1064929633
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064929625}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -4022,14 +4025,25 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.16
-  m_Height: 0.48
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.02, y: 0}
+  m_Size: {x: 0.32, y: 0.48}
+  m_Direction: 0
 --- !u!1 &1242999854
 GameObject:
   m_ObjectHideFlags: 0
@@ -6640,6 +6654,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2124358285426665741, guid: fcd3477466728ba44b84cb1632fd2d51, type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
     - target: {fileID: 2136870730366200027, guid: fcd3477466728ba44b84cb1632fd2d51, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -6721,6 +6739,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4390312643221597947, guid: 2dd4a3ec74ff8c84faee20f8416fc906, type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5470114449338519981, guid: 2dd4a3ec74ff8c84faee20f8416fc906, type: 3}
+      propertyPath: MaxHP
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 6558532534181904098, guid: 2dd4a3ec74ff8c84faee20f8416fc906, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -6791,7 +6817,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7127650670968432757, guid: 2dd4a3ec74ff8c84faee20f8416fc906, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1064929629}
+      addedObject: {fileID: 1064929633}
   m_SourcePrefab: {fileID: 100100000, guid: 2dd4a3ec74ff8c84faee20f8416fc906, type: 3}
 --- !u!1001 &8294009626196343312
 PrefabInstance:
