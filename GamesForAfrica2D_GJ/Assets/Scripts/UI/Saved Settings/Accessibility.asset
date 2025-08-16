@@ -9,21 +9,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c02e8a4f340636a4a86a415437984334, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b3c22a3b098594796f588efd03f2b5, type: 3}
   m_Name: Accessibility
   m_EditorClassIdentifier: 
   Category: Accessibility
   Settings:
-  - rid: 7332598095929147494
+  - rid: 7332598407519797417
+  - rid: 7332598407519797418
   references:
     version: 2
     RefIds:
-    - rid: 7332598095929147494
+    - rid: 7332598407519797417
+      type: {class: BoolSetting, ns: , asm: Assembly-CSharp}
+      data:
+        Key: ColorBlindEnabled
+        Name: Color Blind Mode
+        Order: 1
+        state: 0
+        DefaultValue: 0
+        Type: 4
+    - rid: 7332598407519797418
       type: {class: MultiOptionSetting, ns: , asm: Assembly-CSharp}
       data:
-        Key: ControlPreset
-        Name: Controls Preset
+        Key: ControlPrest
+        Name: Control Preset
+        Order: 0
+        Type: 4
         Options:
-        - WASD Controls
+        - WASD
         - Arrow Keys
-        SelectedIndex: 0
+        selectedIndex: 0
+        DefaultIndex: 0

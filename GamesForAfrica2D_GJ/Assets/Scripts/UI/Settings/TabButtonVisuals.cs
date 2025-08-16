@@ -5,6 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class TabButtonVisuals : ItemVisuals
 {
+    // This script defines the visuals for the tab button in the settings UI
+
     public TextBlock label = null;
     public UIBlock2D Background = null;
     public UIBlock2D SelectedIndicator = null;
@@ -21,7 +23,7 @@ public class TabButtonVisuals : ItemVisuals
         get => SelectedIndicator.gameObject.activeSelf;
         set
         {
-            SelectedIndicator.gameObject.SetActive(value);
+            SelectedIndicator.gameObject.SetActive(value);  // Show or hide the selected indicator
             Background.Color = value ? SelectedColor : DefaultColor;
         }
     }

@@ -2,6 +2,8 @@ using Nova;
 using System;
 using UnityEngine;
 
+//this script defines the visuals for a dropdown menu in the settings UI
+
 [System.Serializable]
 public class DropDownItemVisuals : ItemVisuals
 {
@@ -20,8 +22,6 @@ public class DropDownVisuals : ItemVisuals
     public UIBlock2D Background = null;
     public UIBlock ExpandedRoot = null;
     public ListView OptionsList = null;
-
-    public Action<int> OnOptionSelected;
 
     public Color DefaultColor;
     public Color HoveredColor;
@@ -84,9 +84,10 @@ public class DropDownVisuals : ItemVisuals
 
         ExpandedRoot.gameObject.SetActive(true);
         OptionsList.SetDataSource(dataSource.Options);
-        OptionsList.JumpToIndex(dataSource.SelectedIndex);
+        OptionsList.JumpToIndex(dataSource.selectedIndex);
     }
 
+    // This method is called when the visuals are initialized.
     private void EnsureEventHandlers()
     {
         if (eventHandlersRegistered)
@@ -107,15 +108,14 @@ public class DropDownVisuals : ItemVisuals
     private void BindItem(Data.OnBind<string> evt, DropDownItemVisuals target, int index)
     {
         target.label.Text = evt.UserData;
-        target.SelectedIndicator.gameObject.SetActive(index== dataSource.SelectedIndex);
+        target.SelectedIndicator.gameObject.SetActive(index== dataSource.selectedIndex);
         target.Background.Color = index % 2 == 0 ? PrimaryRowColor : SecondaryRowColor;
     }
 
     private void HandleItemClicked(Gesture.OnClick evt, DropDownItemVisuals target, int index)
     {
-        dataSource.SelectedIndex = index;
+        dataSource.selectedIndex = index;
         SelectedLabel.Text = dataSource.CurrentSelection;
-        OnOptionSelected?.Invoke(index);
         evt.Consume();
         Collapse();
     }
@@ -142,3 +142,5 @@ public class DropDownVisuals : ItemVisuals
         AudioManager.Instance?.PlaySFX("HoverSound");
     }
 }
+
+

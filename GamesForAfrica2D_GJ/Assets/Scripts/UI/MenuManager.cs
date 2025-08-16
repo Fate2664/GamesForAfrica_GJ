@@ -3,6 +3,17 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+
+    private void Start()
+    {
+        if (!AudioManager.Instance.IsPlaying("MenuMusic"))
+        {
+            AudioManager.Instance.PlaySFX("MenuMusic");
+
+        }   
+    }
+
+    //This script manages the main menu
     public void StartGame()
     {
         AudioManager.Instance?.PlaySFX("GameplayMusic");
@@ -14,14 +25,20 @@ public class MenuManager : MonoBehaviour
     {
         Application.Quit();
     }
-
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void LoadSettingsMenu()
+    {
+        SceneManager.LoadScene("SettingsScreen");
     }
 
-    public void LoadSettingMenu()
+    public void LoadLeaderboard()
     {
-        SceneManager.LoadScene("Settings");
+        SceneManager.LoadScene("LeaderBoard");
     }
+
+
+
 }

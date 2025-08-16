@@ -5,11 +5,13 @@ public enum SoundCategory
 {
     Master,
     Music,
-    Effects, 
+    Effects,
     Menu
 }
 
+
 [System.Serializable]
+//this class represents a sound that can be played in the game
 public class Sound
 {
     public string name;

@@ -1,5 +1,7 @@
 using UnityEngine;
 using System;
+using UnityEditor;
+
 
 public class AudioManager : MonoBehaviour
 {
@@ -29,16 +31,23 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
-        PlaySFX("MenuMusic");
+
     }
 
+    public bool IsPlaying(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        return s != null && s.source.isPlaying;
+    }
+
+    // Method to play a specific sound effect
     public void PlaySFX(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
             return;
 
-        // Stop duplicate
+        //Stop Dupicate
         if (s.source.isPlaying)
         {
             s.source.Stop();
@@ -48,13 +57,14 @@ public class AudioManager : MonoBehaviour
         {
             s.source.loop = true;
         }
-        // Compute effective volume
-        float categoryVolume = GetCategoryVolume(s.category);
-        s.source.volume = (s.volume * categoryVolume * (SettingsManager.Instance.MasterVolume / 100) / 100);
 
+        float categoryVolume = GetCategoryVolume(s.category);
+        s.source.volume = (s.volume * (categoryVolume / 100) * (SettingsManager.Instance.MasterVolume / 100));
         s.source.Play();
+
     }
 
+    // Method to stop a specific sound
     public void StopSFX(string name)
     {
         Sound sound = Array.Find(sounds, s => s.name == name);
@@ -79,12 +89,13 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void RefreshAllVolumes()
+    public void UpdateAllVolumes()
     {
         foreach (Sound s in sounds)
         {
             float categoryVolume = GetCategoryVolume(s.category);
-            s.source.volume = s.volume * categoryVolume * SettingsManager.Instance.MasterVolume;
+            s.source.volume = (s.volume * (categoryVolume / 100) * (SettingsManager.Instance.MasterVolume / 100));
         }
     }
+
 }

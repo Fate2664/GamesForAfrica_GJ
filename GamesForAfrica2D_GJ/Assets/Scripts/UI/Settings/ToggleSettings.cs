@@ -1,11 +1,12 @@
 using Nova;
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
 public class ToggleVisuals : ItemVisuals
 {
+    // This script defines the visuals for the toggle button in the settings UI
+
     public TextBlock label = null;
     public UIBlock2D CheckBox = null;
     public UIBlock2D CheckMark = null;
@@ -13,7 +14,6 @@ public class ToggleVisuals : ItemVisuals
     public Color DefaultColor;
     public Color HoverColor;
     public Color PressedColor;
-
 
     public bool IsChecked
     {

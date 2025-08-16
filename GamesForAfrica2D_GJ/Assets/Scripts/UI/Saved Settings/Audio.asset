@@ -9,55 +9,63 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c02e8a4f340636a4a86a415437984334, type: 3}
+  m_Script: {fileID: 11500000, guid: a2b3c22a3b098594796f588efd03f2b5, type: 3}
   m_Name: Audio
   m_EditorClassIdentifier: 
   Category: Audio
   Settings:
-  - rid: 7332598095929147488
-  - rid: 7332598095929147489
-  - rid: 7332598095929147490
-  - rid: 7332598095929147491
+  - rid: 7332598407519797419
+  - rid: 7332598407519797420
+  - rid: 7332598407519797421
+  - rid: 2005466507359289424
   references:
     version: 2
     RefIds:
-    - rid: 7332598095929147488
+    - rid: 2005466507359289424
+      type: {class: FloatSetting, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Effects
+        Name: Effects
+        Order: 3
+        Type: 0
+        _value: 50
+        Min: 0
+        Max: 100
+        ValueFormat: '{0:0}'
+        DefaultValue: 50
+    - rid: 7332598407519797419
       type: {class: FloatSetting, ns: , asm: Assembly-CSharp}
       data:
         Key: MasterVolume
         Name: Master Volume
-        value: 100
+        Order: 0
+        Type: 0
+        _value: 50
         Min: 0
         Max: 100
         ValueFormat: '{0:0}'
-        DefaultValue: 100
-    - rid: 7332598095929147489
-      type: {class: FloatSetting, ns: , asm: Assembly-CSharp}
-      data:
-        Key: Effects
-        Name: Particle Effects
-        value: 100
-        Min: 0
-        Max: 100
-        ValueFormat: '{0:0}'
-        DefaultValue: 100
-    - rid: 7332598095929147490
+        DefaultValue: 50
+    - rid: 7332598407519797420
       type: {class: FloatSetting, ns: , asm: Assembly-CSharp}
       data:
         Key: Menu
         Name: Menu
-        value: 100
+        Order: 1
+        Type: 0
+        _value: 50
         Min: 0
         Max: 100
         ValueFormat: '{0:0}'
-        DefaultValue: 100
-    - rid: 7332598095929147491
+        DefaultValue: 50
+    - rid: 7332598407519797421
       type: {class: FloatSetting, ns: , asm: Assembly-CSharp}
       data:
         Key: Music
         Name: Music
-        value: 100
+        Order: 2
+        Type: 0
+        _value: 50
         Min: 0
         Max: 100
         ValueFormat: '{0:0}'
-        DefaultValue: 100
+        DefaultValue: 50

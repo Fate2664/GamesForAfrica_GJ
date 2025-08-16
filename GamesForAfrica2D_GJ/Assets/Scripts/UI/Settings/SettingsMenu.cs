@@ -1,27 +1,27 @@
-﻿using Nova;
-using NovaSamples.UIControls;
+using Nova;
+using NUnit.Framework.Constraints;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
+    //This script is used to create a settings menu with tabs, toggles, sliders, and dropdowns.
+
     public UIBlock Root = null;
 
     public List<SettingsCollection> SettingsCollection = null;
     public ListView TabBar = null;
     public ListView SettingsList = null;
-
+    public PopupBoxVisuals PopupBox = null;
 
     private int selectedIndex = -1;
-
     private List<Setting> CurrentSettings => SettingsCollection[selectedIndex].Settings;
+    private List<Setting> currentSortedSettings;
 
     private void Start()
     {
-        //ResetAllSettings();
-        LoadAllSettings();
+        SettingsManager.Instance.LoadAllSettings();
 
         //Visual
         Root.AddGestureHandler<Gesture.OnHover, ToggleVisuals>(ToggleVisuals.HandleHover);
@@ -34,15 +34,23 @@ public class SettingsMenu : MonoBehaviour
         Root.AddGestureHandler<Gesture.OnPress, DropDownVisuals>(DropDownVisuals.HandlePress);
         Root.AddGestureHandler<Gesture.OnRelease, DropDownVisuals>(DropDownVisuals.HandleRelease);
 
+        Root.AddGestureHandler<Gesture.OnHover, KeyBindVisuals>(KeyBindVisuals.HandleHover);
+        Root.AddGestureHandler<Gesture.OnUnhover, KeyBindVisuals>(KeyBindVisuals.HandleUnhover);
+        Root.AddGestureHandler<Gesture.OnPress, KeyBindVisuals>(KeyBindVisuals.HandlePress);
+        Root.AddGestureHandler<Gesture.OnRelease, KeyBindVisuals>(KeyBindVisuals.HandleRelease);
+
         //State Changing
         SettingsList.AddGestureHandler<Gesture.OnClick, ToggleVisuals>(HandleToggleClick);
         SettingsList.AddGestureHandler<Gesture.OnDrag, SliderVisuals>(HandleSliderDragged);
         SettingsList.AddGestureHandler<Gesture.OnClick, DropDownVisuals>(HandleDropDownClick);
+        SettingsList.AddGestureHandler<Gesture.OnClick, KeyBindVisuals>(HandleKeyBindClick);
 
+        //Data Binding
         SettingsList.AddDataBinder<BoolSetting, ToggleVisuals>(BindToggle);
         SettingsList.AddDataBinder<FloatSetting, SliderVisuals>(BindSlider);
         SettingsList.AddDataBinder<MultiOptionSetting, DropDownVisuals>(BindDropDown);
         SettingsList.AddDataBinder<ResolutionSetting, DropDownVisuals>(BindResolution);
+        SettingsList.AddDataBinder<KeybindSetting, KeyBindVisuals>(BindKeyBind);
 
         //Tabs
         TabBar.AddDataBinder<SettingsCollection, TabButtonVisuals>(BindTab);
@@ -61,12 +69,27 @@ public class SettingsMenu : MonoBehaviour
 
     }
 
+  
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            List<PopupButtonData> buttons = new List<PopupButtonData>
+            {
+                new PopupButtonData("Confirm", () => SettingsManager.Instance.ResetAllSettings()),
+                new PopupButtonData("Cancel", () => Debug.Log("Cancel"))
+            };
+            PopupBox.Show("Are you sure you want to reset settings?", buttons);
+        }
+    }
 
     private void OnDisable()
     {
-        SaveAllSettings();
+        SettingsManager.Instance.SaveAllSettings();
     }
 
+    #region HandleData
     private void SelectTab(TabButtonVisuals visuals, int index)
     {
         if (index == selectedIndex)
@@ -81,12 +104,13 @@ public class SettingsMenu : MonoBehaviour
 
         selectedIndex = index;
         visuals.isSelected = true;
-        SettingsList.SetDataSource(CurrentSettings);
+
+        currentSortedSettings = new List<Setting>(CurrentSettings);
+        currentSortedSettings.Sort((a, b) => a.Order.CompareTo(b.Order));
+
+        SettingsList.SetDataSource(currentSortedSettings);
     }
 
-
-
-    #region HandleData
     private void HandleTabClicked(Gesture.OnClick evt, TabButtonVisuals target, int index)
     {
         SelectTab(target, index);
@@ -94,47 +118,22 @@ public class SettingsMenu : MonoBehaviour
 
     private void HandleDropDownClick(Gesture.OnClick evt, DropDownVisuals target, int index)
     {
-        Setting genericSetting = CurrentSettings[index];
+        MultiOptionSetting setting = currentSortedSettings[index] as MultiOptionSetting;
 
         if (target.isExpanded)
         {
             target.Collapse();
-            return;
-        }
-
-        if (genericSetting is ResolutionSetting resolutionSetting)
-        {
-            target.OnOptionSelected = (newIndex) =>
-            {
-                resolutionSetting.SelectedIndex = newIndex;
-                resolutionSetting.Save();
-
-                Resolution selectedRes = resolutionSetting.GetSelectedResolution();
-                Screen.SetResolution(selectedRes.width, selectedRes.height, Screen.fullScreenMode, selectedRes.refreshRateRatio);
-            };
-
-            target.Expand(resolutionSetting);
-        }
-        else if (genericSetting is MultiOptionSetting multiOptionSetting)
-        {
-            // ✅ It is a MultiOptionSetting
-            target.OnOptionSelected = (newIndex) =>
-            {
-                multiOptionSetting.SelectedIndex = newIndex;
-                multiOptionSetting.Save();
-            };
-
-            target.Expand(multiOptionSetting);
         }
         else
         {
-            Debug.LogError($"Unknown setting type for dropdown at index {index}: {genericSetting?.GetType()}");
+            target.Expand(setting);
         }
     }
 
     private void HandleSliderDragged(Gesture.OnDrag evt, SliderVisuals target, int index)
     {
-        FloatSetting setting = CurrentSettings[index] as FloatSetting;
+
+        FloatSetting setting = currentSortedSettings[index] as FloatSetting;
 
         Vector3 localPointerPos = target.SliderBackground.transform.InverseTransformPoint(evt.PointerPositions.Current);
 
@@ -144,24 +143,27 @@ public class SettingsMenu : MonoBehaviour
 
         float percentFromLeft = distanceFromLeft / sliderWidth;
 
-        setting.value = Mathf.Lerp(setting.Min, setting.Max, percentFromLeft);
+        setting.Value = Mathf.Lerp(setting.Min, setting.Max, percentFromLeft);
 
         target.FillBar.Size.X.Percent = percentFromLeft;
         target.ValueLabel.Text = setting.DisplayValue;
-
-       
     }
 
     private void HandleToggleClick(Gesture.OnClick evt, ToggleVisuals target, int index)
     {
-        BoolSetting setting = CurrentSettings[index] as BoolSetting;
-        setting.State = !setting.State;
-        target.IsChecked = setting.State;
+        BoolSetting setting = currentSortedSettings[index] as BoolSetting;
+        setting.state = !setting.state;
+        target.IsChecked = setting.state;
     }
 
+    private void HandleKeyBindClick(Gesture.OnClick evt, KeyBindVisuals target, int index)
+    {
+
+    }
 
     #endregion
 
+    //These methods are used to bind the data to the visuals for each type of setting.
     #region BindData
     private void BindTab(Data.OnBind<SettingsCollection> evt, TabButtonVisuals target, int index)
     {
@@ -173,7 +175,10 @@ public class SettingsMenu : MonoBehaviour
     {
         BoolSetting setting = evt.UserData;
         visuals.label.Text = setting.Name;
-        visuals.IsChecked = setting.State;
+        visuals.IsChecked = setting.state;
+
+        setting.OnStateChanged -= SettingsManager.Instance.UpdateSetting;
+        setting.OnStateChanged += SettingsManager.Instance.UpdateSetting;
     }
 
     private void BindSlider(Data.OnBind<FloatSetting> evt, SliderVisuals visuals, int index)
@@ -181,7 +186,11 @@ public class SettingsMenu : MonoBehaviour
         FloatSetting setting = evt.UserData;
         visuals.label.Text = setting.Name;
         visuals.ValueLabel.Text = setting.DisplayValue;
-        visuals.FillBar.Size.X.Percent = (setting.value - setting.Min) / (setting.Max - setting.Min);
+        visuals.FillBar.Size.X.Percent = (setting._value - setting.Min) / (setting.Max - setting.Min);
+
+        setting.OnValueChanged -= SettingsManager.Instance.UpdateSetting;
+        setting.OnValueChanged += SettingsManager.Instance.UpdateSetting;
+
     }
 
     private void BindDropDown(Data.OnBind<MultiOptionSetting> evt, DropDownVisuals visuals, int index)
@@ -189,6 +198,9 @@ public class SettingsMenu : MonoBehaviour
         MultiOptionSetting setting = evt.UserData;
         visuals.label.Text = setting.Name;
         visuals.SelectedLabel.Text = setting.CurrentSelection;
+
+        setting.OnIndexChanged -= SettingsManager.Instance.UpdateSetting;
+        setting.OnIndexChanged += SettingsManager.Instance.UpdateSetting;
         visuals.Collapse();
     }
 
@@ -196,62 +208,21 @@ public class SettingsMenu : MonoBehaviour
     {
         ResolutionSetting setting = evt.UserData;
 
-        // Initialize if needed
         if (setting.Options == null || setting.Options.Length == 0)
         {
-            setting.Initialize(); // Populate Options & Resolutions array
+            setting.Initialize();
         }
 
         visuals.label.Text = setting.Name;
-        visuals.SelectedLabel.Text = setting.Options[setting.SelectedIndex];
+        visuals.SelectedLabel.Text = setting.Options[setting.selectedIndex];
         visuals.Collapse();
     }
-   
+
+    private void BindKeyBind(Data.OnBind<KeybindSetting> evt, KeyBindVisuals target, int index)
+    {
+
+    }
+
     #endregion
-
-    public void ResetAllSettings()
-    {
-        foreach (var collection in SettingsCollection)
-        {
-            foreach (var setting in collection.Settings)
-            {
-                setting.ResetToDefault();
-            }
-        }
-        PlayerPrefs.Save();
-    }
-
-    private void LoadAllSettings()
-    {
-        foreach (var collection in SettingsCollection)
-        {
-            foreach (var setting in collection.Settings)
-            {
-                switch (setting)
-                {
-                    case BoolSetting boolSetting: boolSetting.Load(); break;
-                    case FloatSetting floatSetting: floatSetting.Load(); break;
-                    case MultiOptionSetting multiOptionSetting: multiOptionSetting.Load(); break;
-                }
-            }
-        }
-    }
-
-    private void SaveAllSettings()
-    {
-        foreach (var collection in SettingsCollection)
-        {
-            foreach (var setting in collection.Settings)
-            {
-                switch (setting)
-                {
-                    case BoolSetting boolSetting: boolSetting?.Save(); break;
-                    case FloatSetting floatSetting: floatSetting?.Save(); break;
-                    case MultiOptionSetting multiOptionSetting: multiOptionSetting?.Save(); break;
-                }
-            }
-        }
-        PlayerPrefs.Save();
-    }
 
 }
