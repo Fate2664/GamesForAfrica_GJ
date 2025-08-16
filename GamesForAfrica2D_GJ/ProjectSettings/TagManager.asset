@@ -2,18 +2,25 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Ground
+  - RangeAttack
+  - Enemy
+  - AttackRange
+  - PopupRange
+  - TallGrass
+  - Snake
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Ground
+  - Player
+  - Enemy
   - 
   - 
   - 
@@ -38,6 +45,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3353894309
+    locked: 0
+  - name: MiddleGround
+    uniqueID: 454031317
+    locked: 0
+  - name: FrontGround
+    uniqueID: 77460831
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  m_RenderingLayers:
+  - Default

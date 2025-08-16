@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02e8a4f340636a4a86a415437984334, type: 3}
+  m_Name: Audio
+  m_EditorClassIdentifier: 
+  Category: Audio
+  Settings:
+  - rid: 7332598095929147488
+  - rid: 7332598095929147489
+  - rid: 7332598095929147490
+  - rid: 7332598095929147491
+  references:
+    version: 2
+    RefIds:
+    - rid: 7332598095929147488
+      type: {class: FloatSetting, ns: , asm: Assembly-CSharp}
+      data:
+        Key: MasterVolume
+        Name: Master Volume
+        value: 100
+        Min: 0
+        Max: 100
+        ValueFormat: '{0:0}'
+        DefaultValue: 100
+    - rid: 7332598095929147489
+      type: {class: FloatSetting, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Effects
+        Name: Particle Effects
+        value: 100
+        Min: 0
+        Max: 100
+        ValueFormat: '{0:0}'
+        DefaultValue: 100
+    - rid: 7332598095929147490
+      type: {class: FloatSetting, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Menu
+        Name: Menu
+        value: 100
+        Min: 0
+        Max: 100
+        ValueFormat: '{0:0}'
+        DefaultValue: 100
+    - rid: 7332598095929147491
+      type: {class: FloatSetting, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Music
+        Name: Music
+        value: 100
+        Min: 0
+        Max: 100
+        ValueFormat: '{0:0}'
+        DefaultValue: 100
