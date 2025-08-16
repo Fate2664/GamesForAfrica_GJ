@@ -3,14 +3,14 @@ using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] private Transform target;
+    
     [SerializeField] private float speed = 200f;
     [SerializeField] private float nextWaypointDistance = 1f;
 
     private Path path;
     private int currentWaypoint = 0;
     private bool reachedEndOfPath = false;
-
+    private Transform target;
     Seeker seeker;
     Rigidbody2D rb;
     EnemyLookRange lookRange;
@@ -19,6 +19,7 @@ public class EnemyAI : MonoBehaviour
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        target = GameObject.FindGameObjectWithTag("Player").transform;
         lookRange = GetComponentInChildren<EnemyLookRange>();
         InvokeRepeating("UpdatePath", 0f, 0.5f); // Update path every 0.5 seconds
 
