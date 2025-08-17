@@ -13,7 +13,10 @@ public class PlayerStats : MonoBehaviour
     public const float baseSpreadAngle=24;
     public const float baseBulletSize=5;
     public const float baseMoveSpeed=3;
+    public const float baseMoney=0;
+
     //Attack
+    public float money;
     public float attackDamage;
     public float attackRange;
     public float attackSpeed;

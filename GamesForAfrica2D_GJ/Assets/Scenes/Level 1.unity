@@ -2480,6 +2480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1939261847}
   - component: {fileID: 1939261846}
+  - component: {fileID: 1939261848}
   m_Layer: 0
   m_Name: UpgradesManager
   m_TagString: Untagged
@@ -2535,6 +2536,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1939261848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939261845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3da3d4952af17141814c1defc621a14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 0}
 --- !u!1 &1957661085
 GameObject:
   m_ObjectHideFlags: 0
@@ -2921,6 +2935,38 @@ PrefabInstance:
       propertyPath: crossAxisItemCount
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7110091173117859356, guid: 5abd315e1bf3eb740b99b26db28c92d8, type: 3}
+      propertyPath: listItemPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110091173117859356, guid: 5abd315e1bf3eb740b99b26db28c92d8, type: 3}
+      propertyPath: 'listItemPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 6201741124154434771, guid: 31669511c7aa99649ad9f30d7f041c4b, type: 3}
+    - target: {fileID: 7110091173117859356, guid: 5abd315e1bf3eb740b99b26db28c92d8, type: 3}
+      propertyPath: 'listItemPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 6201741124154434771, guid: 31669511c7aa99649ad9f30d7f041c4b, type: 3}
+    - target: {fileID: 7110091173117859356, guid: 5abd315e1bf3eb740b99b26db28c92d8, type: 3}
+      propertyPath: 'listItemPrefabs.Array.data[3]'
+      value: 
+      objectReference: {fileID: 6201741124154434771, guid: 31669511c7aa99649ad9f30d7f041c4b, type: 3}
+    - target: {fileID: 7110091173117859356, guid: 5abd315e1bf3eb740b99b26db28c92d8, type: 3}
+      propertyPath: 'listItemPrefabs.Array.data[4]'
+      value: 
+      objectReference: {fileID: 6201741124154434771, guid: 31669511c7aa99649ad9f30d7f041c4b, type: 3}
+    - target: {fileID: 7110091173117859356, guid: 5abd315e1bf3eb740b99b26db28c92d8, type: 3}
+      propertyPath: 'listItemPrefabs.Array.data[5]'
+      value: 
+      objectReference: {fileID: 6201741124154434771, guid: 31669511c7aa99649ad9f30d7f041c4b, type: 3}
+    - target: {fileID: 7110091173117859356, guid: 5abd315e1bf3eb740b99b26db28c92d8, type: 3}
+      propertyPath: 'listItemPrefabs.Array.data[6]'
+      value: 
+      objectReference: {fileID: 6201741124154434771, guid: 31669511c7aa99649ad9f30d7f041c4b, type: 3}
+    - target: {fileID: 7110091173117859356, guid: 5abd315e1bf3eb740b99b26db28c92d8, type: 3}
+      propertyPath: 'listItemPrefabs.Array.data[7]'
+      value: 
+      objectReference: {fileID: 6201741124154434771, guid: 31669511c7aa99649ad9f30d7f041c4b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
