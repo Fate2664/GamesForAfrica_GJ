@@ -3,12 +3,11 @@ using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
-    public PlayerStats BaseStats;
     public Projectile BulletPrefab;
     private Vector2 movementInput;
-    private PlayerStats CurrentStats;
+    public PlayerStats PlayerStats;
     private float LastAttackTime;
     private Animator animator;
     private Vector2 lastPosition;
@@ -17,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         lastPosition = transform.position;
-        ResetStats();
         LastAttackTime = 0;
     }
     void Start()
@@ -50,12 +48,12 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Move()
     {
-        Vector3 movement = new Vector3(movementInput.x, movementInput.y, 0f) * CurrentStats.moveSpeed * Time.deltaTime;
+        Vector3 movement = new Vector3(movementInput.x, movementInput.y, 0f) * PlayerStats.moveSpeed * Time.deltaTime;
         transform.Translate(movement,Space.World);
     }
     void Attack()
     {
-        if (Time.time - LastAttackTime >= 1f / CurrentStats.attackSpeed)
+        if (Time.time - LastAttackTime >= 1f / PlayerStats.attackSpeed)
         {
             //Debug.Log("LookingForTarget");
             FindTarget();
@@ -65,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FindTarget()
     {
+        //Debug.Log("finding");
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (enemies.Length == 0)
         {
@@ -76,23 +75,23 @@ public class PlayerMovement : MonoBehaviour
         foreach (GameObject enemy in enemies)
         {
             float distance = Vector2.Distance(transform.position, enemy.transform.position);
-            if (distance < CurrentStats.attackRange && distance < closestDistance)
+            if (distance < PlayerStats.attackRange && distance < closestDistance)
             {
                 closestDistance = distance;
                 nearestEnemy = enemy;
             }
         }
-        if (nearestEnemy != null&&closestDistance<=CurrentStats.attackRange)
+        if (nearestEnemy != null&&closestDistance<=PlayerStats.attackRange)
         {
             Shoot(nearestEnemy.transform.position);
         }
     }
     void Shoot(Vector3 target)
     {
-        float angleStep = CurrentStats.spreadAngle / (CurrentStats.bullets - 1);
-        float startAngle = -CurrentStats.spreadAngle / 2f;
+        float angleStep = PlayerStats.spreadAngle / (PlayerStats.bulletCount - 1);
+        float startAngle = -PlayerStats.spreadAngle / 2f;
         Vector2 baseDirection = (target - transform.position).normalized;
-        for (int i = 0; i < CurrentStats.bullets; i++)
+        for (int i = 0; i < PlayerStats.bulletCount; i++)
         {
             float currentAngle = startAngle + (angleStep * i);
             Quaternion rotation = Quaternion.AngleAxis(currentAngle, Vector3.forward);
@@ -111,14 +110,11 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 projScript.direction = pelletDirection;
-                projScript.speed = CurrentStats.bulletSpeed;
-                projScript.damage = CurrentStats.attackDamage;
-                projScript.maxDistance = CurrentStats.attackRange;
+                projScript.speed = PlayerStats.bulletSpeed;
+                projScript.damage = PlayerStats.attackDamage;
+                projScript.maxDistance = PlayerStats.attackRange;
+                projScript.transform.localScale = new Vector3(PlayerStats.bulletSize, PlayerStats.bulletSize, 1);
             }
         }
-    }
-    void ResetStats()
-    {
-        CurrentStats = BaseStats;
     }
 }

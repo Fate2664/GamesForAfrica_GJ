@@ -4,7 +4,7 @@ public class Projectile : MonoBehaviour
 {
     public float speed;
     public float damage;
-    public float maxDistance;
+    public float maxDistance;    
     public Vector2 direction;
     private Vector2 spawnPosition;
     private float distanceTraveled;
