@@ -13,14 +13,12 @@ public class EnemyAI : MonoBehaviour
     private Transform target;
     Seeker seeker;
     Rigidbody2D rb;
-    EnemyLookRange lookRange;
 
     void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        lookRange = GetComponentInChildren<EnemyLookRange>();
         InvokeRepeating("UpdatePath", 0f, 0.5f); // Update path every 0.5 seconds
 
        
@@ -32,7 +30,7 @@ public class EnemyAI : MonoBehaviour
         {
             return; // No path to follow
         }
-        if (lookRange.inLookRange)
+        if (true)   //lookrange 
         {
 
             if (currentWaypoint >= path.vectorPath.Count)
