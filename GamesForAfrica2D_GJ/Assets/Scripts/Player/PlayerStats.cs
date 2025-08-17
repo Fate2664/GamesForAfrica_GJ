@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
+    public enum StatType { attackDamage, attackRange, attackSpeed, bulletCount, bulletSpeed, spreadAngle, bulletSize, moveSpeed }
     const float baseUpgradeValue=1.5f;
     //starting stats
     const float baseAttackDamage=10;
@@ -36,6 +37,37 @@ public class PlayerStats : MonoBehaviour
         spreadAngle = baseSpreadAngle;
         bulletSize = baseBulletSize;
         moveSpeed = baseMoveSpeed;
+    }
+
+    public void UpgradeStat(StatType statType)
+    {
+        switch (statType)
+        {
+            case StatType.attackDamage:
+                UpgradeAttackDamage();
+                break;
+            case StatType.attackRange:
+                UpgradeAttackRange();
+                break;
+            case StatType.attackSpeed:
+                UpgradeAttackSpeed();
+                break;
+            case StatType.bulletCount:
+                UpgradeBulletCount();
+                break;
+            case StatType.bulletSpeed:
+                UpgradeBulletSpeed();
+                break;
+            case StatType.spreadAngle:
+                UpgradeSpreadAngle();
+                break;
+            case StatType.bulletSize:
+                UpgradeBulletSize();
+                break;
+            case StatType.moveSpeed:
+                UpgradeMoveSpeed();
+                break;
+        }
     }
     public void UpgradeAttackDamage()
     {
