@@ -6773,17 +6773,41 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3705335381190697919, guid: fcd3477466728ba44b84cb1632fd2d51, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997575309921532179, guid: fcd3477466728ba44b84cb1632fd2d51, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997575309921532179, guid: fcd3477466728ba44b84cb1632fd2d51, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4774635226735521554, guid: fcd3477466728ba44b84cb1632fd2d51, type: 3}
       propertyPath: BaseStats
       value: 
       objectReference: {fileID: 2006330868}
     - target: {fileID: 4774635226735521554, guid: fcd3477466728ba44b84cb1632fd2d51, type: 3}
+      propertyPath: PlayerStats
+      value: 
+      objectReference: {fileID: 2006330868}
+    - target: {fileID: 4774635226735521554, guid: fcd3477466728ba44b84cb1632fd2d51, type: 3}
       propertyPath: CurrentStats
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2006330868}
     - target: {fileID: 5064614695579958895, guid: fcd3477466728ba44b84cb1632fd2d51, type: 3}
       propertyPath: bullets
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064614695579958895, guid: fcd3477466728ba44b84cb1632fd2d51, type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064614695579958895, guid: fcd3477466728ba44b84cb1632fd2d51, type: 3}
+      propertyPath: bulletSize
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5064614695579958895, guid: fcd3477466728ba44b84cb1632fd2d51, type: 3}
       propertyPath: attackRange
@@ -6838,7 +6862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5470114449338519981, guid: 2dd4a3ec74ff8c84faee20f8416fc906, type: 3}
       propertyPath: MaxHP
-      value: 50
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 6558532534181904098, guid: 2dd4a3ec74ff8c84faee20f8416fc906, type: 3}
       propertyPath: m_LocalScale.x

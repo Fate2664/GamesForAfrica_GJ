@@ -5,14 +5,14 @@ public class PlayerStats : MonoBehaviour
     public enum StatType { attackDamage, attackRange, attackSpeed, bulletCount, bulletSpeed, spreadAngle, bulletSize, moveSpeed }
     const float baseUpgradeValue=1.5f;
     //starting stats
-    const float baseAttackDamage=10;
-    const float baseAttackRange = 2;
-    const float baseAttackSpeed = 1;
-    const float baseBulletCount=3;
-    const float baseBulletSpeed = 5;
-    const float baseSpreadAngle=15;
-    const float baseBulletSize=1;
-    const float baseMoveSpeed=3;
+    public const float baseAttackDamage=10;
+    public const float baseAttackRange = 2;
+    public const float baseAttackSpeed = 1;
+    public const float baseBulletCount=3;
+    public const float baseBulletSpeed = 5;
+    public const float baseSpreadAngle=24;
+    public const float baseBulletSize=5;
+    public const float baseMoveSpeed=3;
     //Attack
     public float attackDamage;
     public float attackRange;
@@ -63,48 +63,49 @@ public class PlayerStats : MonoBehaviour
                 break;
             case StatType.bulletSize:
                 UpgradeBulletSize();
+                UpgradeSpreadAngle();
                 break;
             case StatType.moveSpeed:
                 UpgradeMoveSpeed();
                 break;
         }
     }
-    public void UpgradeAttackDamage()
+    private void UpgradeAttackDamage()
     {
         attackDamage += baseAttackDamage * baseUpgradeValue;
     }
 
-    public void UpgradeAttackRange()
+    private void UpgradeAttackRange()
     {
         attackRange += baseAttackRange * baseUpgradeValue;
     }
 
-    public void UpgradeAttackSpeed()
+    private void UpgradeAttackSpeed()
     {
         attackSpeed += baseAttackSpeed * baseUpgradeValue;
     }
 
-    public void UpgradeBulletCount()
+    private void UpgradeBulletCount()
     {
         bulletCount += 1;
     }
 
-    public void UpgradeBulletSpeed()
+    private void UpgradeBulletSpeed()
     {
         bulletSpeed += baseBulletSpeed * baseUpgradeValue;
     }
 
-    public void UpgradeSpreadAngle()
+    private void UpgradeSpreadAngle()
     {
-        spreadAngle += 5;
+        spreadAngle += (bulletSize - baseBulletSize) * 3f;
     }
 
-    public void UpgradeBulletSize()
+    private void UpgradeBulletSize()
     {
-        bulletSize += baseBulletSize * baseUpgradeValue;
+        bulletSize += 1;
     }
 
-    public void UpgradeMoveSpeed()
+    private void UpgradeMoveSpeed() 
     {
         moveSpeed += baseMoveSpeed * baseUpgradeValue;
     }
