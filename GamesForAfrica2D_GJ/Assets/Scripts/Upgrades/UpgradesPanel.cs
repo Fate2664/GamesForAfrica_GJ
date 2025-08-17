@@ -25,26 +25,20 @@ public class UpgradesPanel : MonoBehaviour
         InitGrid(UpgradeGrid, UpgradeItems);
     }
 
-    public void AddItemToUpgradeInventory(UpgradeDescription itemDesc, int count = 1)
+    public void AddItemToUpgradeInventory(UpgradeDescription itemDesc)
     {
         var existing = UpgradeItems.Find(x => x.item == itemDesc);
 
-        if (existing != null)
+
+        int emptyIndex = UpgradeItems.FindIndex(x => x.isEmpty);
+        if (emptyIndex != -1)
         {
-            existing.count = Mathf.Min(existing.count + count, UpgradeItem.maxCount);
-        }
-        else
-        {
-            int emptyIndex = UpgradeItems.FindIndex(x => x.isEmpty);
-            if (emptyIndex != -1)
+            UpgradeItems[emptyIndex] = new UpgradeItem
             {
-                UpgradeItems[emptyIndex] = new UpgradeItem
-                {
-                    item = itemDesc,
-                    count = count
-                };
-            }
+                item = itemDesc,
+            };
         }
+
 
         if (UpgradeGrid.gameObject.activeInHierarchy)
         {

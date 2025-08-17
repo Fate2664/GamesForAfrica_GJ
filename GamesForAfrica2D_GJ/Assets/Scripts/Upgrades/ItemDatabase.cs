@@ -17,7 +17,7 @@ public class UpgradeItem
 
     public bool isEmpty => this == Empty;
 
-    public const int maxCount = 20;
+    public const int maxCount = 1;
     public static readonly UpgradeItem Empty = new UpgradeItem();
    
 }

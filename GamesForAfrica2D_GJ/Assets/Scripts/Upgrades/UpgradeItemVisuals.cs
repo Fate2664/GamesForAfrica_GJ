@@ -33,6 +33,7 @@ public class UpgradeItemVisuals : ItemVisuals
     {
         pressHandle.Cancel();
         pressHandle = pressAnimation.Run(duration);
+        
     }
 
     public void Release()
