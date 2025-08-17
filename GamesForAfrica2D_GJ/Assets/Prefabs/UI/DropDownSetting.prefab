@@ -2980,15 +2980,15 @@ MonoBehaviour:
       Direction: 0
     Image:
       Adjustment:
-        CenterUV: {x: -0.55, y: 0}
-        UVScale: {x: -3.55, y: 6.69}
+        CenterUV: {x: -0.545, y: 0}
+        UVScale: {x: 3.56, y: 6.7}
         PixelsPerUnitMultiplier: 1
         scaleMode: 0
-      Mode: 1
+      Mode: 0
     SoftenEdges: 1
     FillEnabled: 1
   texture: {fileID: 2800000, guid: 29b1062d113a62e4991f84b124370263, type: 3}
-  sprite: {fileID: -2551520166058431191, guid: 29b1062d113a62e4991f84b124370263, type: 3}
+  sprite: {fileID: 0}
 --- !u!114 &1129456590563469964
 MonoBehaviour:
   m_ObjectHideFlags: 0

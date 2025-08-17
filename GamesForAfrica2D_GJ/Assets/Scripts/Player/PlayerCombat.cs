@@ -3,21 +3,12 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     [Header("Player Attack")]
-    [SerializeField] float attackRange = 2f;
-    [SerializeField] float attackSpeed = 1f;
-    [SerializeField] int bulletNum = 3;
-    [SerializeField] float bulletSpeed = 5f;
-    [SerializeField] float spreadAngle = 30f;
-    [SerializeField] private float attackDamage = 10f;
     [SerializeField] private Projectile bulletPrefab;
 
     [Space(10)]
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private PlayerStats playerStats;
 
-    private float nextAttackTime = 0f;
-    private int attackTrigger = Animator.StringToHash("isAttacking");
-    private static bool isAttacking = false;
     private float LastAttackTime = 0f;
 
     private void Awake()
@@ -33,8 +24,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Attack()
     {
-        isAttacking = true;
-        if (Time.time - LastAttackTime >= 1f / attackSpeed)
+        if (Time.time - LastAttackTime >= 1f / playerStats.attackSpeed)
         {
             FindTarget();
             LastAttackTime = Time.time;
@@ -55,14 +45,14 @@ public class PlayerCombat : MonoBehaviour
         foreach (GameObject enemy in enemies)
         {
             float distance = Vector2.Distance(transform.position, enemy.transform.position);
-            if (distance < attackRange && distance < closestDistance)
+            if (distance < playerStats.attackRange && distance < closestDistance)
             {
                 closestDistance = distance;
                 nearestEnemy = enemy;
             }
         }
 
-        if (nearestEnemy != null && closestDistance <= attackRange)
+        if (nearestEnemy != null && closestDistance <= playerStats.attackRange)
         {
             Shoot(nearestEnemy.transform.position);
         }
@@ -70,11 +60,11 @@ public class PlayerCombat : MonoBehaviour
 
     void Shoot(Vector3 target)
     {
-        float angleStep = spreadAngle / (bulletNum - 1);
-        float startAngle = -spreadAngle / 2f;
+        float angleStep = playerStats.spreadAngle / (playerStats.bulletCount - 1);
+        float startAngle = -playerStats.spreadAngle / 2f;
         Vector2 baseDirection = (target - transform.position).normalized;
 
-        for (int i = 0; i < bulletNum; i++)
+        for (int i = 0; i < playerStats.bulletCount; i++)
         {
             float currentAngle = startAngle + (angleStep * i);
             Quaternion rotation = Quaternion.AngleAxis(currentAngle, Vector3.forward);
@@ -87,9 +77,9 @@ public class PlayerCombat : MonoBehaviour
             );
             Projectile projScript = projectile.GetComponent<Projectile>();
             projScript.direction = pelletDirection;
-            projScript.speed = bulletSpeed;
-            projScript.damage = attackDamage / bulletNum;
-            projScript.maxDistance = attackRange;
+            projScript.speed = playerStats.bulletSpeed;
+            projScript.damage = playerStats.attackDamage / playerStats.bulletCount;
+            projScript.maxDistance = playerStats.attackRange;
         }
     }
 

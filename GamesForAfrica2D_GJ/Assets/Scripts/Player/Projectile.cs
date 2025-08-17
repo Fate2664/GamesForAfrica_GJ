@@ -27,11 +27,11 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.collider.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy"))
         {
-            Enemy enemy = collision.collider.GetComponent<Enemy>();
+            Enemy enemy = collision.GetComponent<Enemy>();
             Vector2 attackDirection = (collision.transform.position - transform.position).normalized;
             if (enemy != null)
             {

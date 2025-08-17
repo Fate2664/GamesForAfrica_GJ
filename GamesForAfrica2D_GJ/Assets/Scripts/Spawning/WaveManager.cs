@@ -6,13 +6,13 @@ public class WaveManager : MonoBehaviour
     [Header("Wave Settings")]
     [Tooltip("Initial number of enemies to spawn in the first wave.")]
     public int initialEnemiesPerWave = 3;
-    public float timeBetweenWaves = 5f;
     public float timeBetweenSpawns = 1f;
 
     [Header("Connections")]
     [SerializeField] private EnemySpawner enemySpawner;
 
     private int currentWave = 0;
+    private bool isUpgradePanelActive = false;
 
     private void Start()
     {
@@ -34,7 +34,24 @@ public class WaveManager : MonoBehaviour
 
             currentWave++;
             enemiesToSpawn += 2; // Increase by 2 each wave
-            yield return new WaitForSeconds(timeBetweenWaves);
+
+            // Show upgrade panel and wait until it is closed
+            ShowUpgradePanel();
+            yield return new WaitUntil(() => !isUpgradePanelActive);
         }
+    }
+
+    private void ShowUpgradePanel()
+    {
+        isUpgradePanelActive = true;
+        // Your code to enable/show the upgrade panel goes here
+        // For example: upgradePanel.SetActive(true);
+    }
+
+    // Call this from your UI when the player closes the upgrade panel
+    public void OnUpgradePanelClosed()
+    {
+        isUpgradePanelActive = false;
+        // For example: upgradePanel.SetActive(false);
     }
 }

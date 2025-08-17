@@ -7,7 +7,7 @@ public class SpriteFlipper : MonoBehaviour
 
     private void Awake()
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _previousXPosition = transform.position.x;
     }
 

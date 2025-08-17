@@ -4918,7 +4918,7 @@ Transform:
   m_GameObject: {fileID: 8101755120028737805}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.94, y: -0.13, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -6258,9 +6258,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0.16577767, b: 0.11792451, a: 1}
-        key1: {r: 0.7232557, g: 0.43867922, b: 1, a: 1}
-        key2: {r: 0.72156864, g: 0.4392157, b: 1, a: 0}
+        key0: {r: 1, g: 0.583537, b: 0.11764705, a: 1}
+        key1: {r: 0.990566, g: 0.07892504, b: 0.07008721, a: 1}
+        key2: {r: 0.99215686, g: 0.078431375, b: 0.07058824, a: 0}
         key3: {r: 1, g: 1, b: 1, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -9748,9 +9748,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 77460831
+  m_SortingLayer: -1
+  m_SortingOrder: 5
   m_RenderMode: 1
   m_MeshDistribution: 0
   m_SortMode: 0
