@@ -992,7 +992,7 @@ MonoBehaviour:
         Background: {fileID: 7460791944982899886}
         ExpandedRoot: {fileID: 6257487651042796161}
         OptionsList: {fileID: 50686171257335331}
-        DefaultColor: {r: 1, g: 1, b: 1, a: 1}
+        DefaultColor: {r: 1, g: 1, b: 1, a: 0}
         HoveredColor: {r: 0.31536376, g: 0.2273495, b: 0.16448215, a: 1}
         PressedColor: {r: 0.42318046, g: 0.31293145, b: 0.23668446, a: 1}
         PrimaryRowColor: {r: 0.1482479, g: 0.09778767, b: 0.05814034, a: 1}
@@ -1383,7 +1383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5818638136447301774
 Transform:
   m_ObjectHideFlags: 0
@@ -2980,14 +2980,14 @@ MonoBehaviour:
       Direction: 0
     Image:
       Adjustment:
-        CenterUV: {x: 0, y: 0}
-        UVScale: {x: 1.03, y: 1}
+        CenterUV: {x: -0.55, y: 0}
+        UVScale: {x: -3.55, y: 6.69}
         PixelsPerUnitMultiplier: 1
         scaleMode: 0
       Mode: 1
     SoftenEdges: 1
     FillEnabled: 1
-  texture: {fileID: 0}
+  texture: {fileID: 2800000, guid: 29b1062d113a62e4991f84b124370263, type: 3}
   sprite: {fileID: -2551520166058431191, guid: 29b1062d113a62e4991f84b124370263, type: 3}
 --- !u!114 &1129456590563469964
 MonoBehaviour:

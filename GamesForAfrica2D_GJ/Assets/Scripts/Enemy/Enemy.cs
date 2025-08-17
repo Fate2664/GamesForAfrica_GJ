@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour, IDamageable
     [SerializeField] private float maxHealth = 100;
     [SerializeField] public int contactDamage = 10;
     [SerializeField] private float damageCooldown = 1f;
+    [SerializeField] private float contacDamage = 5f;
 
     [Header("Knockback")]
     [SerializeField] public float knockbackX = 5f;
@@ -101,6 +102,19 @@ public class Enemy : MonoBehaviour, IDamageable
 
             // Ensure particle system has time to finish
             Destroy(ps.gameObject, ps.main.duration + ps.main.startLifetime.constantMax);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Rhino"))
+        {
+            if (Time.time - lastDamageTime >= damageCooldown)
+            {
+                lastDamageTime = Time.time;
+                Vector2 attackDirection = (collision.transform.position - transform.position).normalized;
+                collision.gameObject.GetComponent<IDamageable>().TakeDamage(contactDamage, attackDirection);
+            }
         }
     }
 
