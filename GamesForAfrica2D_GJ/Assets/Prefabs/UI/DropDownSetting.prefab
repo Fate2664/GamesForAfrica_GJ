@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 1576038598570974837}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 305, y: 0, z: 0}
+  m_LocalPosition: {x: 292.15, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -72,7 +72,7 @@ MonoBehaviour:
         Type: 0
     Position:
       X:
-        Raw: 0
+        Raw: 12.85
         Type: 0
       Y:
         Raw: 0
@@ -240,7 +240,7 @@ MonoBehaviour:
       FillAngle: 90
       Enabled: 0
     Gradient:
-      Color: {r: 0.16470589, g: 0.16470589, b: 0.5176471, a: 1}
+      Color: {r: 0.88679236, g: 0.64544475, b: 0.36212674, a: 1}
       Center:
         X:
           Raw: 0.031725056
@@ -319,7 +319,7 @@ Transform:
   m_GameObject: {fileID: 1625488269450561792}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 215.03851, y: 0, z: 0}
+  m_LocalPosition: {x: 307.895, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -365,7 +365,7 @@ MonoBehaviour:
         Type: 0
     Position:
       X:
-        Raw: 11.11
+        Raw: 30.6
         Type: 0
       Y:
         Raw: 0
@@ -809,7 +809,7 @@ MonoBehaviour:
         Raw: 1
         Type: 1
       Y:
-        Raw: 80
+        Raw: 110.56
         Type: 0
       Z:
         Raw: 0
@@ -966,7 +966,7 @@ MonoBehaviour:
     LightingModel: 0
     ShadowCastingMode: 2
     ReceiveShadows: 1
-  PreviewSize: {x: 1, y: 80, z: 0}
+  PreviewSize: {x: 1, y: 110.56, z: 0}
 --- !u!114 &1461763903705212677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -992,11 +992,11 @@ MonoBehaviour:
         Background: {fileID: 7460791944982899886}
         ExpandedRoot: {fileID: 6257487651042796161}
         OptionsList: {fileID: 50686171257335331}
-        DefaultColor: {r: 0.105882354, g: 0.10980392, b: 0.29411766, a: 1}
-        HoveredColor: {r: 0.13465646, g: 0.13465646, b: 0.3207547, a: 1}
-        PressedColor: {r: 0.16470589, g: 0.16470589, b: 0.38039216, a: 1}
-        PrimaryRowColor: {r: 0.04685831, g: 0.05633121, b: 0.122641504, a: 1}
-        SecondaryRowColor: {r: 0.04685831, g: 0.05633121, b: 0.18431373, a: 1}
+        DefaultColor: {r: 1, g: 1, b: 1, a: 1}
+        HoveredColor: {r: 0.31536376, g: 0.2273495, b: 0.16448215, a: 1}
+        PressedColor: {r: 0.42318046, g: 0.31293145, b: 0.23668446, a: 1}
+        PrimaryRowColor: {r: 0.1482479, g: 0.09778767, b: 0.05814034, a: 1}
+        SecondaryRowColor: {r: 0.2, g: 0.09778767, b: 0.05814034, a: 1}
 --- !u!1 &4794773896999766487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,7 +1033,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -225.18402, y: 0}
+  m_AnchoredPosition: {x: -202.10902, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &138686400838378832
@@ -1120,7 +1120,7 @@ MonoBehaviour:
         Type: 0
     Position:
       X:
-        Raw: 0
+        Raw: 0.0355
         Type: 1
       Y:
         Raw: 0
@@ -1383,7 +1383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5818638136447301774
 Transform:
   m_ObjectHideFlags: 0
@@ -1393,7 +1393,7 @@ Transform:
   m_GameObject: {fileID: 5204326933754024501}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -160.00012, z: 0}
+  m_LocalPosition: {x: 0, y: -175.28012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1592,7 +1592,7 @@ MonoBehaviour:
     ReceiveShadows: 1
   PreviewSize: {x: 1, y: 1, z: 0}
   visuals:
-    Color: {r: 0.04685831, g: 0.05633121, b: 0.122641504, a: 1}
+    Color: {r: 1, g: 1, b: 1, a: 1}
     CornerRadius:
       Raw: 8
       Type: 0
@@ -1626,11 +1626,11 @@ MonoBehaviour:
       Rotation: 0
       Enabled: 0
     Border:
-      Color: {r: 0.16470589, g: 0.16470589, b: 0.5176471, a: 1}
+      Color: {r: 0.21293801, g: 0.15551841, b: 0.11450439, a: 1}
       Width:
         Raw: 4
         Type: 0
-      Enabled: 1
+      Enabled: 0
       Direction: 0
     Shadow:
       Color: {r: 0, g: 0, b: 0, a: 0.5}
@@ -1651,14 +1651,14 @@ MonoBehaviour:
       Direction: 0
     Image:
       Adjustment:
-        CenterUV: {x: 0, y: 0}
-        UVScale: {x: 1, y: 1}
+        CenterUV: {x: -0.55, y: 0}
+        UVScale: {x: 3.55, y: 10}
         PixelsPerUnitMultiplier: 1
-        scaleMode: 1
+        scaleMode: 0
       Mode: 1
     SoftenEdges: 1
     FillEnabled: 1
-  texture: {fileID: 0}
+  texture: {fileID: 2800000, guid: 29b1062d113a62e4991f84b124370263, type: 3}
   sprite: {fileID: 0}
 --- !u!114 &8128530396103508593
 MonoBehaviour:
@@ -2269,7 +2269,7 @@ MonoBehaviour:
     ReceiveShadows: 1
   PreviewSize: {x: 1, y: 1, z: 0}
   visuals:
-    Color: {r: 1, g: 1, b: 1, a: 1}
+    Color: {r: 0.42318046, g: 0.31293145, b: 0.23668446, a: 1}
     CornerRadius:
       Raw: 10
       Type: 0
@@ -2285,7 +2285,7 @@ MonoBehaviour:
       FillAngle: 90
       Enabled: 0
     Gradient:
-      Color: {r: 0.16470589, g: 0.16470589, b: 0.5176471, a: 1}
+      Color: {r: 0.88679236, g: 0.64544475, b: 0.36212674, a: 1}
       Center:
         X:
           Raw: -0.57701904
@@ -2310,7 +2310,7 @@ MonoBehaviour:
       Enabled: 0
       Direction: 2
     Shadow:
-      Color: {r: 0.16470589, g: 0.16470589, b: 0.5176471, a: 1}
+      Color: {r: 0.92452824, g: 0.7508604, b: 0.5469917, a: 1}
       Width:
         Raw: 2
         Type: 0
@@ -2451,7 +2451,7 @@ MonoBehaviour:
   layout:
     Size:
       X:
-        Raw: 1
+        Raw: 0.927
         Type: 1
       Y:
         Raw: 0
@@ -2570,7 +2570,7 @@ MonoBehaviour:
       Y: 0
       Z: 0
     AutoSize:
-      X: 1
+      X: 0
       Y: 2
       Z: 0
     RotateSize: 0
@@ -2921,7 +2921,7 @@ MonoBehaviour:
     ReceiveShadows: 1
   PreviewSize: {x: 1, y: 1, z: 0}
   visuals:
-    Color: {r: 0.10588236, g: 0.10980393, b: 0.29411766, a: 1}
+    Color: {r: 1, g: 1, b: 1, a: 1}
     CornerRadius:
       Raw: 15
       Type: 0
@@ -2955,16 +2955,16 @@ MonoBehaviour:
       Rotation: 0
       Enabled: 0
     Border:
-      Color: {r: 0.16470589, g: 0.16470589, b: 0.5176471, a: 1}
+      Color: {r: 0.84905654, g: 0.5818574, b: 0.39706543, a: 1}
       Width:
         Raw: 4
         Type: 0
-      Enabled: 1
+      Enabled: 0
       Direction: 0
     Shadow:
-      Color: {r: 0.16470589, g: 0.16470589, b: 0.38039216, a: 1}
+      Color: {r: 0.1482479, g: 0.09778767, b: 0.05814034, a: 1}
       Width:
-        Raw: 5
+        Raw: 0.24
         Type: 0
       Blur:
         Raw: 20
@@ -2976,19 +2976,19 @@ MonoBehaviour:
         Y:
           Raw: 0
           Type: 0
-      Enabled: 1
-      Direction: 1
+      Enabled: 0
+      Direction: 0
     Image:
       Adjustment:
         CenterUV: {x: 0, y: 0}
-        UVScale: {x: 1, y: 1}
+        UVScale: {x: 1.03, y: 1}
         PixelsPerUnitMultiplier: 1
-        scaleMode: 1
+        scaleMode: 0
       Mode: 1
     SoftenEdges: 1
     FillEnabled: 1
   texture: {fileID: 0}
-  sprite: {fileID: 0}
+  sprite: {fileID: -2551520166058431191, guid: 29b1062d113a62e4991f84b124370263, type: 3}
 --- !u!114 &1129456590563469964
 MonoBehaviour:
   m_ObjectHideFlags: 0

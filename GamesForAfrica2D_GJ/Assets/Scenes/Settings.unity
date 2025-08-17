@@ -359,7 +359,7 @@ MonoBehaviour:
       FillAngle: 90
       Enabled: 0
     Gradient:
-      Color: {r: 0.10588236, g: 0.10980393, b: 0.29411766, a: 1}
+      Color: {r: 0.42318046, g: 0.31293145, b: 0.23668446, a: 1}
       Center:
         X:
           Raw: 0.0010650354
@@ -377,14 +377,14 @@ MonoBehaviour:
       Rotation: 0.9320505
       Enabled: 1
     Border:
-      Color: {r: 0.16470589, g: 0.16470589, b: 0.5176471, a: 1}
+      Color: {r: 0.44130364, g: 0.5849056, b: 0.3176778, a: 1}
       Width:
         Raw: 3
         Type: 0
       Enabled: 1
       Direction: 2
     Shadow:
-      Color: {r: 0.04685831, g: 0.05633121, b: 0.122641504, a: 1}
+      Color: {r: 0.12668449, g: 0.071968, b: 0.029878397, a: 1}
       Width:
         Raw: 20.7
         Type: 0
@@ -1618,7 +1618,7 @@ MonoBehaviour:
     ReceiveShadows: 1
   PreviewSize: {x: 27.531002, y: 15.2890005, z: 0}
   visuals:
-    Color: {r: 0.06207727, g: 0.06461376, b: 0.084905684, a: 1}
+    Color: {r: 0.1482479, g: 0.09778767, b: 0.05814034, a: 1}
     CornerRadius:
       Raw: 0
       Type: 0
@@ -1634,7 +1634,7 @@ MonoBehaviour:
       FillAngle: 90
       Enabled: 0
     Gradient:
-      Color: {r: 0.09153615, g: 0.09752234, b: 0.16037738, a: 1}
+      Color: {r: 0.05660361, g: 0.03767493, b: 0.023114407, a: 1}
       Center:
         X:
           Raw: -0.000000016763806
@@ -2816,7 +2816,7 @@ MonoBehaviour:
     ReceiveShadows: 1
   PreviewSize: {x: 1, y: 1, z: 0}
   visuals:
-    Color: {r: 0.11650054, g: 0.1256052, b: 0.20754719, a: 1}
+    Color: {r: 0.1913746, g: 0.11921383, b: 0.06370555, a: 1}
     CornerRadius:
       Raw: 38.12
       Type: 0
@@ -2832,7 +2832,7 @@ MonoBehaviour:
       FillAngle: 90
       Enabled: 0
     Gradient:
-      Color: {r: 0.04685831, g: 0.05633121, b: 0.122641504, a: 1}
+      Color: {r: 0.09973043, g: 0.05422469, b: 0.019220274, a: 1}
       Center:
         X:
           Raw: 0.000000025364368
@@ -2850,14 +2850,14 @@ MonoBehaviour:
       Rotation: 359.86877
       Enabled: 1
     Border:
-      Color: {r: 0.16470589, g: 0.16470589, b: 0.5176471, a: 1}
+      Color: {r: 0.44130364, g: 0.5849056, b: 0.3176778, a: 1}
       Width:
         Raw: 7
         Type: 0
       Enabled: 1
       Direction: 2
     Shadow:
-      Color: {r: 0.10588236, g: 0.10980393, b: 0.29411766, a: 1}
+      Color: {r: 0.21293801, g: 0.105395935, b: 0.022671279, a: 1}
       Width:
         Raw: 24.2
         Type: 0
