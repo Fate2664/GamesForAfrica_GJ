@@ -2986,7 +2986,6 @@ PrefabInstance:
     - target: {fileID: 819896490155482573, guid: 24cf13c8ea54fc343be4e2a2515c3d85, type: 3}
       propertyPath: target
       value: 
-<<<<<<< HEAD
       objectReference: {fileID: 0}
     - target: {fileID: 819896490155482573, guid: 24cf13c8ea54fc343be4e2a2515c3d85, type: 3}
       propertyPath: nextWaypointDistance
@@ -3060,9 +3059,6 @@ PrefabInstance:
       propertyPath: damageParticles
       value: 
       objectReference: {fileID: 2148263299724491560, guid: 6f139873c98f96f46af98ab4525c1f3a, type: 3}
-=======
-      objectReference: {fileID: 2145982434}
->>>>>>> fb7dc63457bc67b404089cca30499d36c52ee2dc
     - target: {fileID: 6788955611648209837, guid: 24cf13c8ea54fc343be4e2a2515c3d85, type: 3}
       propertyPath: m_Name
       value: Shooting_Enemy
