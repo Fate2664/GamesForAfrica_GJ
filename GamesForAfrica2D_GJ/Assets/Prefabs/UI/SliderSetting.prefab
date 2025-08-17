@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1299.4999, y: 4.4810004}
+  m_AnchoredPosition: {x: -413.30542, y: 4.4810004}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &8156025773963077491
@@ -655,7 +655,7 @@ MonoBehaviour:
         UVScale: {x: 10.19, y: 5.63}
         PixelsPerUnitMultiplier: 1
         scaleMode: 0
-      Mode: 1
+      Mode: 0
     SoftenEdges: 1
     FillEnabled: 1
   texture: {fileID: 2800000, guid: b590a36e21d6ec54d9a2e97d5e5f2f85, type: 3}
@@ -696,7 +696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1123.1232, y: 0.84300005}
+  m_AnchoredPosition: {x: 423.02942, y: 0.84300005}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &7543763224957640019
@@ -1058,7 +1058,7 @@ Transform:
   m_GameObject: {fileID: 4242398799138485880}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06203399, y: 0, z: 0}
+  m_LocalPosition: {x: 186.16284, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1333,7 +1333,7 @@ Transform:
   m_GameObject: {fileID: 7132712817843869653}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -130, z: 0}
+  m_LocalPosition: {x: 886.6945, y: -134.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1370,7 +1370,7 @@ MonoBehaviour:
   layout:
     Size:
       X:
-        Raw: 1
+        Raw: 0.9850001
         Type: 1
       Y:
         Raw: 80
@@ -1383,7 +1383,7 @@ MonoBehaviour:
         Raw: 0
         Type: 0
       Y:
-        Raw: -130
+        Raw: -134.85
         Type: 0
       Z:
         Raw: 0
@@ -1489,7 +1489,7 @@ MonoBehaviour:
       Y: 0
       Z: 0
     AutoSize:
-      X: 1
+      X: 0
       Y: 0
       Z: 0
     RotateSize: 0
@@ -1530,7 +1530,7 @@ MonoBehaviour:
     LightingModel: 0
     ShadowCastingMode: 2
     ReceiveShadows: 1
-  PreviewSize: {x: 1, y: 80, z: 0}
+  PreviewSize: {x: 1773.389, y: 80, z: 0}
 --- !u!114 &7431064212400539329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1875,7 +1875,7 @@ Transform:
   m_GameObject: {fileID: 7542081745784952336}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 621.391, y: 0.84300005, z: 0}
+  m_LocalPosition: {x: -78.7027, y: 0.84300005, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2136,7 +2136,7 @@ MonoBehaviour:
         UVScale: {x: 3.5, y: 6.8}
         PixelsPerUnitMultiplier: 1
         scaleMode: 0
-      Mode: 1
+      Mode: 0
     SoftenEdges: 1
     FillEnabled: 1
   texture: {fileID: 2800000, guid: 29b1062d113a62e4991f84b124370263, type: 3}
