@@ -113,10 +113,10 @@ MonoBehaviour:
   layout:
     Size:
       X:
-        Raw: 214.5253
+        Raw: 213.96191
         Type: 0
       Y:
-        Raw: 76.98041
+        Raw: 76.778244
         Type: 0
       Z:
         Raw: 0
@@ -321,8 +321,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 723.5
-  m_fontSizeBase: 723.5
+  m_fontSize: 721.6
+  m_fontSizeBase: 721.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0.5
@@ -595,7 +595,7 @@ MonoBehaviour:
     ReceiveShadows: 1
   PreviewSize: {x: 380, y: 100, z: 0}
   visuals:
-    Color: {r: 0.10034712, g: 0.25948337, b: 0.38679248, a: 1}
+    Color: {r: 0.13245693, g: 0.30997294, b: 0.07143577, a: 1}
     CornerRadius:
       Raw: 15
       Type: 0
@@ -611,7 +611,7 @@ MonoBehaviour:
       FillAngle: 90
       Enabled: 0
     Gradient:
-      Color: {r: 0.21186365, g: 0.462037, b: 0.6509434, a: 1}
+      Color: {r: 0.44130364, g: 0.5849056, b: 0.3176778, a: 1}
       Center:
         X:
           Raw: 0
@@ -629,14 +629,14 @@ MonoBehaviour:
       Rotation: 0
       Enabled: 1
     Border:
-      Color: {r: 0.049928807, g: 0.37624186, b: 0.6226415, a: 1}
+      Color: {r: 0.13245693, g: 0.30997294, b: 0.07143577, a: 1}
       Width:
         Raw: 4
         Type: 0
-      Enabled: 0
+      Enabled: 1
       Direction: 2
     Shadow:
-      Color: {r: 0.08414915, g: 0.20060004, b: 0.2924528, a: 1}
+      Color: {r: 0.07735308, g: 0.18059295, b: 0.040645562, a: 1}
       Width:
         Raw: 9.68
         Type: 0
@@ -734,5 +734,5 @@ MonoBehaviour:
       data:
         ButtonLabel: {fileID: 6921968608789543133}
         Background: {fileID: 6583002701457418009}
-        DefaultColor: {r: 0.101960786, g: 0.25882354, b: 0.3882353, a: 1}
-        PressedColor: {r: 0.049928807, g: 0.37624186, b: 0.6226415, a: 1}
+        DefaultColor: {r: 0.44313726, g: 0.58431375, b: 0.31764707, a: 1}
+        PressedColor: {r: 0.25858352, g: 0.41239887, b: 0.12616509, a: 1}

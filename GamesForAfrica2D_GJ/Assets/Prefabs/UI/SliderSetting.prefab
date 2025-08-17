@@ -395,7 +395,7 @@ Transform:
   m_GameObject: {fileID: 2018553862957635777}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 125, y: 0, z: 0}
+  m_LocalPosition: {x: 134.3, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -430,10 +430,10 @@ MonoBehaviour:
   layout:
     Size:
       X:
-        Raw: 70
+        Raw: 51.4
         Type: 0
       Y:
-        Raw: 70
+        Raw: 51.4
         Type: 0
       Z:
         Raw: 0
@@ -608,7 +608,7 @@ MonoBehaviour:
       FillAngle: 90
       Enabled: 0
     Gradient:
-      Color: {r: 0.16470589, g: 0.16470589, b: 0.5176471, a: 1}
+      Color: {r: 0.92452824, g: 0.7508604, b: 0.5469917, a: 1}
       Center:
         X:
           Raw: 0.005964824
@@ -658,7 +658,7 @@ MonoBehaviour:
       Mode: 1
     SoftenEdges: 1
     FillEnabled: 1
-  texture: {fileID: 2800000, guid: edc22a81ee5816c49a94dbe54ddfca83, type: 3}
+  texture: {fileID: 0}
   sprite: {fileID: 0}
 --- !u!1 &2226277936462717018
 GameObject:
@@ -1621,7 +1621,7 @@ MonoBehaviour:
         Raw: 0.5
         Type: 1
       Y:
-        Raw: 1
+        Raw: 0.577
         Type: 1
       Z:
         Raw: 0
@@ -1738,7 +1738,7 @@ MonoBehaviour:
       Z: 0
     AutoSize:
       X: 0
-      Y: 1
+      Y: 0
       Z: 0
     RotateSize: 0
     AspectRatio: {x: 0, y: 0, z: 0}
@@ -1780,9 +1780,9 @@ MonoBehaviour:
     ReceiveShadows: 1
   PreviewSize: {x: 1, y: 1, z: 0}
   visuals:
-    Color: {r: 0.16470589, g: 0.16470589, b: 0.37254903, a: 0}
+    Color: {r: 0.42318046, g: 0.31293145, b: 0.23668446, a: 0}
     CornerRadius:
-      Raw: 1
+      Raw: 0.4071
       Type: 1
     RadialFill:
       Center:
