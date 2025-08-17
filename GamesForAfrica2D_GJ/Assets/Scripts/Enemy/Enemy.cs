@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour, IDamageable
     [SerializeField] private float maxHealth = 100;
     [SerializeField] public int contactDamage = 10;
     [SerializeField] private float damageCooldown = 1f;
+    [SerializeField] private float contacDamage = 5f;
 
     [Header("Knockback")]
     [SerializeField] public float knockbackX = 5f;
@@ -108,6 +109,7 @@ public class Enemy : MonoBehaviour, IDamageable
         }
     }
 
+<<<<<<< HEAD
     public void ApplyKnockback(Vector2 direction, float force)
     {
         if (!playerStats.IsAlive) return;
@@ -144,6 +146,19 @@ public class Enemy : MonoBehaviour, IDamageable
             elapsed += flashSpeed * 2;
         }
         spriteRenderer.color = Color.white;
+=======
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Rhino"))
+        {
+            if (Time.time - lastDamageTime >= damageCooldown)
+            {
+                lastDamageTime = Time.time;
+                Vector2 attackDirection = (collision.transform.position - transform.position).normalized;
+                collision.gameObject.GetComponent<IDamageable>().TakeDamage(contactDamage, attackDirection);
+            }
+        }
+>>>>>>> fb7dc63457bc67b404089cca30499d36c52ee2dc
     }
 
 }

@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8977163864646722176
 Transform:
   m_ObjectHideFlags: 0
@@ -224,9 +224,9 @@ MonoBehaviour:
     LightingModel: 0
     ShadowCastingMode: 2
     ReceiveShadows: 1
-  PreviewSize: {x: 1, y: 1, z: 0}
+  PreviewSize: {x: 1000, y: 500, z: 0}
   visuals:
-    Color: {r: 0.14417943, g: 0.26534536, b: 0.3773585, a: 1}
+    Color: {r: 0.25858352, g: 0.41239887, b: 0.12616509, a: 1}
     CornerRadius:
       Raw: 40
       Type: 0
@@ -242,7 +242,7 @@ MonoBehaviour:
       FillAngle: 90
       Enabled: 0
     Gradient:
-      Color: {r: 0.15356888, g: 0.20434488, b: 0.2735849, a: 1}
+      Color: {r: 0.07735308, g: 0.18059295, b: 0.040645562, a: 1}
       Center:
         X:
           Raw: 0
@@ -260,14 +260,14 @@ MonoBehaviour:
       Rotation: 0
       Enabled: 1
     Border:
-      Color: {r: 0.049928807, g: 0.37624186, b: 0.6226415, a: 1}
+      Color: {r: 0.13245693, g: 0.30997294, b: 0.07143577, a: 1}
       Width:
         Raw: 10
         Type: 0
       Enabled: 1
       Direction: 2
     Shadow:
-      Color: {r: 0.07342472, g: 0.18827079, b: 0.2830189, a: 1}
+      Color: {r: 0.07735308, g: 0.18059295, b: 0.040645562, a: 1}
       Width:
         Raw: 42
         Type: 0
@@ -356,7 +356,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1424508063130521048, guid: 9fc823e6425850349b1cf44d16f4d0c9, type: 2}
+  - {fileID: -705600598073930265, guid: 1263b6500b4ce4a45bef5cfeddfa9ea5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -590,8 +590,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Are you sure you want to reset settings?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9fc823e6425850349b1cf44d16f4d0c9, type: 2}
-  m_sharedMaterial: {fileID: -1424508063130521048, guid: 9fc823e6425850349b1cf44d16f4d0c9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1263b6500b4ce4a45bef5cfeddfa9ea5, type: 2}
+  m_sharedMaterial: {fileID: -705600598073930265, guid: 1263b6500b4ce4a45bef5cfeddfa9ea5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1123,6 +1123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listItemPrefabs:
-  - {fileID: 3269862358012575335, guid: eedc2ee52118ad54cb9d412c1d7a2676, type: 3}
+  - {fileID: 3269862358012575335, guid: 693f0ef2756ed5047bfa0280332ec0f7, type: 3}
   outOfViewDistance: 0
   _uiBlock: {fileID: 0}

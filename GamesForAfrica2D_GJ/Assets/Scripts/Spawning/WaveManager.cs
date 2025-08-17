@@ -4,8 +4,8 @@ using UnityEngine;
 public class WaveManager : MonoBehaviour
 {
     [Header("Wave Settings")]
-    [Tooltip("Number of enemies to spawn in each wave. The length of this array determines the number of waves.")]
-    public int[] enemiesPerWave; 
+    [Tooltip("Initial number of enemies to spawn in the first wave.")]
+    public int initialEnemiesPerWave = 3;
     public float timeBetweenWaves = 5f;
     public float timeBetweenSpawns = 1f;
 
@@ -13,7 +13,6 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private EnemySpawner enemySpawner;
 
     private int currentWave = 0;
-    private bool spawning = false;
 
     private void Start()
     {
@@ -22,29 +21,20 @@ public class WaveManager : MonoBehaviour
 
     private IEnumerator SpawnWaves()
     {
-        while (currentWave < enemiesPerWave.Length)
-        {
-            Debug.Log($"Starting Wave {currentWave + 1}");
+        int enemiesToSpawn = initialEnemiesPerWave;
 
-            int enemiesToSpawn = enemiesPerWave[currentWave];
+        while (true) // Infinite waves
+        {
+            Debug.Log("Current Wave: " + currentWave);
             for (int i = 0; i < enemiesToSpawn; i++)
             {
-                Debug.Log($"Spawning enemy {i + 1}/{enemiesToSpawn} in wave {currentWave + 1}");
                 enemySpawner.SpawnEnemy();
                 yield return new WaitForSeconds(timeBetweenSpawns);
             }
 
-            Debug.Log($"Wave {currentWave + 1} complete");
-
             currentWave++;
-            if (currentWave < enemiesPerWave.Length)
-            {
-                Debug.Log($"Waiting {timeBetweenWaves} seconds before next wave...");
-                yield return new WaitForSeconds(timeBetweenWaves);
-            }
+            enemiesToSpawn += 2; // Increase by 2 each wave
+            yield return new WaitForSeconds(timeBetweenWaves);
         }
-        
-        Debug.Log("All waves finished!");
     }
-
 }

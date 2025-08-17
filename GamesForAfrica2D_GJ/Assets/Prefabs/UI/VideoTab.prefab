@@ -226,7 +226,7 @@ MonoBehaviour:
     LightingModel: 0
     ShadowCastingMode: 2
     ReceiveShadows: 1
-  PreviewSize: {x: 1, y: 1, z: 0}
+  PreviewSize: {x: 225.95833, y: 65.947266, z: 0}
   visuals:
     Color: {r: 0, g: 0, b: 0, a: 0}
     CornerRadius:
@@ -244,7 +244,7 @@ MonoBehaviour:
       FillAngle: 90
       Enabled: 0
     Gradient:
-      Color: {r: 0.10588236, g: 0.10980393, b: 0.29411766, a: 1}
+      Color: {r: 0.13245693, g: 0.30997294, b: 0.07143577, a: 1}
       Center:
         X:
           Raw: -0.003342097
@@ -262,14 +262,14 @@ MonoBehaviour:
       Rotation: 359.15326
       Enabled: 1
     Border:
-      Color: {r: 0.16470589, g: 0.16470589, b: 0.5176471, a: 1}
+      Color: {r: 0.44130364, g: 0.5849056, b: 0.3176778, a: 1}
       Width:
         Raw: 4
         Type: 0
       Enabled: 1
       Direction: 2
     Shadow:
-      Color: {r: 0.04685831, g: 0.05633121, b: 0.122641504, a: 1}
+      Color: {r: 0.07735308, g: 0.18059295, b: 0.040645562, a: 1}
       Width:
         Raw: 3.8
         Type: 0
@@ -319,11 +319,11 @@ MonoBehaviour:
         label: {fileID: 9154471715980358570}
         Background: {fileID: 2199391966673193998}
         SelectedIndicator: {fileID: 6225729494300746526}
-        DefaultColor: {r: 0, g: 0, b: 0, a: 0}
-        SelectedColor: {r: 0.10588236, g: 0.10980393, b: 0.40392157, a: 1}
-        DefaultGradientColor: {r: 0.105882354, g: 0.10980392, b: 0.29411766, a: 0.49019608}
-        HoveredGradientColor: {r: 0.13443395, g: 0.13858823, b: 0.5, a: 1}
-        PressedGradientColor: {r: 0.105882354, g: 0.10980392, b: 0.5176471, a: 0.49019608}
+        DefaultColor: {r: 0.13333334, g: 0.30980393, b: 0.07058824, a: 0}
+        SelectedColor: {r: 0.13333334, g: 0.30980393, b: 0.07058824, a: 1}
+        DefaultGradientColor: {r: 0.13333334, g: 0.30980393, b: 0.07058824, a: 0.54901963}
+        HoveredGradientColor: {r: 0.25858352, g: 0.41239887, b: 0.12616509, a: 1}
+        PressedGradientColor: {r: 0.44130364, g: 0.5849056, b: 0.3176778, a: 0.50980395}
 --- !u!114 &212041644331202988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -981,7 +981,7 @@ MonoBehaviour:
       FillAngle: 90
       Enabled: 0
     Gradient:
-      Color: {r: 0.10588236, g: 0.10980393, b: 0.29411766, a: 1}
+      Color: {r: 0.07735308, g: 0.18059295, b: 0.040645562, a: 1}
       Center:
         X:
           Raw: -0.43510792

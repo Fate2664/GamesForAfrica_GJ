@@ -3,9 +3,8 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [Header("Enemy Settings")]
-    public Transform spawnPoint;
+    public Transform[] spawnPoint;
     public GameObject[] enemyPrefab;
-    public GameObject enemies_GameObject;
 
 
     public void SpawnEnemy()
@@ -14,7 +13,10 @@ public class EnemySpawner : MonoBehaviour
             return;
 
         int randomIndex = Random.Range(0, enemyPrefab.Length);
-        GameObject spawnedEnemy = Instantiate(enemyPrefab[randomIndex], spawnPoint.position, Quaternion.identity);
-        spawnedEnemy.transform.SetParent(enemies_GameObject.transform, this);
+        for (int i = 0; i < spawnPoint.Length; i++)
+        {
+            Instantiate(enemyPrefab[randomIndex], spawnPoint[i].position, Quaternion.identity);
+
+        }   
     }
 }

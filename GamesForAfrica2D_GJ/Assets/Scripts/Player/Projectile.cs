@@ -2,16 +2,17 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed = 10f;
-    public float damage = 5f;
-    public float maxDistance = 5f;
+    public float speed;
+    public float damage;
+    public float maxDistance;    
     public Vector2 direction;
     private Vector2 spawnPosition;
-    private float distanceTraveled = 0f;
+    private float distanceTraveled;
 
     private void Start()
     {
         spawnPosition = transform.position;
+        distanceTraveled = 0;
     }
 
     private void Update()
@@ -28,15 +29,18 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
         if (collision.collider.CompareTag("Enemy"))
         {
-            IDamageable damageable = collision.collider.GetComponent<IDamageable>();
+            Enemy enemy = collision.collider.GetComponent<Enemy>();
             Vector2 attackDirection = (collision.transform.position - transform.position).normalized;
-            if (damageable != null)
+            if (enemy != null)
             {
+<<<<<<< HEAD
                 damageable.TakeDamage(damage, attackDirection);
                 damageable.ApplyKnockback(attackDirection, 5f);
+=======
+                enemy.TakeDamage(damage, attackDirection);
+>>>>>>> fb7dc63457bc67b404089cca30499d36c52ee2dc
             }
             DestroyProjectile();
         }

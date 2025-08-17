@@ -1,23 +1,23 @@
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-public class UpgradeOption
-{
-    public string name;
-    public Sprite icon;
-    public string description;
-    public System.Action applyUpgrade;
-}
+
 public class UpgradeManager : MonoBehaviour
 {
+    public PlayerStats playerStats;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
-        
+        playerStats = GetComponent<PlayerStats>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void BuyUpgrade(UpgradeData upgrade)
     {
-        
+        if (upgrade.cost > PlayerStats.baseMoney)
+            return;
+        playerStats.UpgradeStat(upgrade.stat);
+        playerStats.money -= upgrade.cost;
     }
+
 }
+

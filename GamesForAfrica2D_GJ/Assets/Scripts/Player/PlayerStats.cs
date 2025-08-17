@@ -1,70 +1,119 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class PlayerStats : MonoBehaviour
 {
-    [Header("Player Stats")]
-    [SerializeField] private float moveSpeed = 3f;
+    public enum StatType { attackDamage, attackRange, attackSpeed, bulletCount, bulletSpeed, spreadAngle, bulletSize, moveSpeed }
+    const float baseUpgradeValue=1.5f;
+    //starting stats
+    public const float baseAttackDamage=10;
+    public const float baseAttackRange = 2;
+    public const float baseAttackSpeed = 1;
+    public const float baseBulletCount=3;
+    public const float baseBulletSpeed = 5;
+    public const float baseSpreadAngle=24;
+    public const float baseBulletSize=5;
+    public const float baseMoveSpeed=3;
+    public const float baseMoney=0;
 
-    [Header("UI/Animations")]  
-    [SerializeField] private DeathScreen deathScreen;
-    [SerializeField] private Animator animator;
-
-    private float currentHealth;
-    private float maxHealth;
-    private Rigidbody2D rb;
-    private bool isDead = false;
-
-    public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
-    public float Health { get => currentHealth; set => currentHealth = value; }
-    public float MaxHealth { get => maxHealth; set => maxHealth = value; }
-
-    public bool IsAlive => currentHealth > 0;
-
-    private void Start()
+    //Attack
+    public float money;
+    public float attackDamage;
+    public float attackRange;
+    public float attackSpeed;
+    public float bulletCount;
+    public float bulletSpeed;
+    public float spreadAngle;
+    public float bulletSize;
+    //Movement
+    public float moveSpeed;
+    private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-
-        switch (SettingsManager.Instance.Difficulty)
-        {
-            case 0:
-                maxHealth = 200; break;
-            case 1:
-                maxHealth = 100; break;
-            case 2:
-                maxHealth = 50; break;
-            case 3:
-                maxHealth = 10; break;
-        }
-
-        currentHealth = maxHealth;
+        ResetStats();
+    }
+    void ResetStats()
+    {
+        attackDamage = baseAttackDamage;
+        attackRange = baseAttackRange;
+        attackSpeed = baseAttackSpeed;
+        bulletCount = baseBulletCount;
+        bulletSpeed = baseBulletSpeed;
+        spreadAngle = baseSpreadAngle;
+        bulletSize = baseBulletSize;
+        moveSpeed = baseMoveSpeed;
     }
 
-    public void Die()
+    public void UpgradeStat(StatType statType)
     {
-        if (isDead)
+        switch (statType)
         {
-            return;
+            case StatType.attackDamage:
+                UpgradeAttackDamage();
+                break;
+            case StatType.attackRange:
+                UpgradeAttackRange();
+                break;
+            case StatType.attackSpeed:
+                UpgradeAttackSpeed();
+                break;
+            case StatType.bulletCount:
+                UpgradeBulletCount();
+                break;
+            case StatType.bulletSpeed:
+                UpgradeBulletSpeed();
+                break;
+            case StatType.spreadAngle:
+                UpgradeSpreadAngle();
+                break;
+            case StatType.bulletSize:
+                UpgradeBulletSize();
+                UpgradeSpreadAngle();
+                break;
+            case StatType.moveSpeed:
+                UpgradeMoveSpeed();
+                break;
         }
-
-        isDead = true;
-        rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        // Play death animation
-        if (animator != null)
-        {
-            animator.SetTrigger("isDead");
-        }
-        deathScreen.ShowDeathScreen();
+    }
+<<<<<<< HEAD
+=======
+    private void UpgradeAttackDamage()
+    {
+        attackDamage += baseAttackDamage * baseUpgradeValue;
     }
 
-    public void TakeDamage(float damage, Vector2 attackDirection)
+    private void UpgradeAttackRange()
     {
-        currentHealth -= damage;
-        attackDirection = Vector2.zero; // Ignore attack direction for player
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
+        attackRange += baseAttackRange * baseUpgradeValue;
     }
+
+    private void UpgradeAttackSpeed()
+    {
+        attackSpeed += baseAttackSpeed * baseUpgradeValue;
+    }
+
+    private void UpgradeBulletCount()
+    {
+        bulletCount += 1;
+    }
+
+    private void UpgradeBulletSpeed()
+    {
+        bulletSpeed += baseBulletSpeed * baseUpgradeValue;
+    }
+
+    private void UpgradeSpreadAngle()
+    {
+        spreadAngle += (bulletSize - baseBulletSize) * 3f;
+    }
+
+    private void UpgradeBulletSize()
+    {
+        bulletSize += 1;
+    }
+
+    private void UpgradeMoveSpeed() 
+    {
+        moveSpeed += baseMoveSpeed * baseUpgradeValue;
+    }
+>>>>>>> fb7dc63457bc67b404089cca30499d36c52ee2dc
 
 }

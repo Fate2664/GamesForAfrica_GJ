@@ -6,14 +6,17 @@ using UnityEngine.UI;
 public class DeathScreen : MonoBehaviour
 {
     public GameObject deathScreen;
+    public GameObject mainUI;
     public Button restartButton;
     public Button menuButton;
 
+    [SerializeField] private AudioSource engineSource;
     [SerializeField] private Volume _volume;
     [Range(-100, 100)]
     [SerializeField] private float _saturation = 0f;
     [Range(-10, 10)]
     [SerializeField] private float _postExposure = 0f;
+
     private PauseVolume pauseVolume;
     void Start()
     {
@@ -27,8 +30,10 @@ public class DeathScreen : MonoBehaviour
     {
 
         deathScreen.SetActive(true);      //Show the death screen
+        mainUI.SetActive(false);
+        engineSource.Pause();             //Pause the engine sound
         pauseVolume.ApplyPauseEffect();
-        //Time.timeScale = 0f;            //Freeze the game
+        Time.timeScale = 0f;            //Freeze the game
 
     }
 
@@ -45,7 +50,8 @@ public class DeathScreen : MonoBehaviour
         Time.timeScale = 1f;            //reset the game timer
         AudioManager.Instance?.StopSFX("GameplayMusic"); //Stop the gameplay music
         AudioManager.Instance?.PlaySFX("MenuMusic"); //Play the main menu music
-        SceneManager.LoadScene("Menu");      //load the main menu
+        SceneManager.LoadScene("MainMenu");      //load the main menu
     }
+
 
 }

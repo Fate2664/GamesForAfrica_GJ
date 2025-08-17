@@ -1,0 +1,80 @@
+using Nova;
+using UnityEngine;
+using System.Collections.Generic;
+using System;
+using System.Linq;
+
+public class UpgradesPanel : MonoBehaviour
+{
+    public ItemDatabase ItemDatabase = null;
+
+    [Header("Upgrades")]
+    public GridView UpgradeGrid = null;
+    public int UpgradeCount = 24;
+
+    [Header("Row Styling")]
+    public RadialGradient RowGradient;
+
+    [HideInInspector]
+    private List<UpgradeItem> UpgradeItems = null;
+
+    private void Start()
+    {
+        UpgradeItems = ItemDatabase.GetEmptyItems(UpgradeCount);
+
+        InitGrid(UpgradeGrid, UpgradeItems);
+    }
+
+    public void AddItemToUpgradeInventory(UpgradeDescription itemDesc)
+    {
+        var existing = UpgradeItems.Find(x => x.item == itemDesc);
+
+
+        int emptyIndex = UpgradeItems.FindIndex(x => x.isEmpty);
+        if (emptyIndex != -1)
+        {
+            UpgradeItems[emptyIndex] = new UpgradeItem
+            {
+                item = itemDesc,
+            };
+        }
+
+
+        if (UpgradeGrid.gameObject.activeInHierarchy)
+        {
+            UpgradeGrid.Refresh();
+        }
+    }
+
+    private void InitGrid(GridView grid, List<UpgradeItem> datasource)
+    {
+
+        grid.AddDataBinder<UpgradeItem, UpgradeItemVisuals>(BindItem);
+
+        grid.SetSliceProvider(ProvideSlice);
+
+        grid.AddGestureHandler<Gesture.OnHover, UpgradeItemVisuals>(HandleHover);
+        grid.AddGestureHandler<Gesture.OnUnhover, UpgradeItemVisuals>(HandleUnhover);
+        grid.AddGestureHandler<Gesture.OnPress, UpgradeItemVisuals>(HandlePress);
+        grid.AddGestureHandler<Gesture.OnRelease, UpgradeItemVisuals>(HandleRelease);
+
+        grid.SetDataSource(datasource);
+    }
+
+
+    private void HandleRelease(Gesture.OnRelease evt, UpgradeItemVisuals target, int index) => target.Release();
+    private void HandlePress(Gesture.OnPress evt, UpgradeItemVisuals target, int index) => target.Press();
+    private void HandleUnhover(Gesture.OnUnhover evt, UpgradeItemVisuals target, int index) => target.Unhover();
+    private void HandleHover(Gesture.OnHover evt, UpgradeItemVisuals target, int index) => target.Hover();
+
+
+    private void ProvideSlice(int sliceIndex, GridView gridview, ref GridSlice2D gridslice)
+    {
+        gridslice.Layout.AutoSize.Y = AutoSize.Shrink;
+        gridslice.AutoLayout.AutoSpace = true;
+        gridslice.Layout.Padding.Value = 30;
+
+        gridslice.Gradient = RowGradient;
+    }
+    private void BindItem(Data.OnBind<UpgradeItem> evt, UpgradeItemVisuals target, int index) => target.Bind(evt.UserData);
+}
