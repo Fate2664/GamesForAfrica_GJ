@@ -111,8 +111,6 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public void ApplyKnockback(Vector2 direction, float force)
     {
-        //if (!playerStats.IsAlive) return;
-
         isKnockback = true;
         Invoke(nameof(ResetKnockback), 0.8f); // Reset knockback after 0.8 seconds
 
@@ -145,6 +143,23 @@ public class Enemy : MonoBehaviour, IDamageable
             elapsed += flashSpeed * 2;
         }
         spriteRenderer.color = Color.white;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Rhino"))
+        {
+            if (Time.time - lastDamageTime >= damageCooldown)
+            {
+                lastDamageTime = Time.time;
+                IDamageable rhino = collision.gameObject.GetComponent<IDamageable>();
+                if (rhino != null)
+                {
+                    Vector2 attackDirection = (collision.transform.position - transform.position).normalized;
+                    rhino.TakeDamage(contactDamage, attackDirection);
+                }
+            }
+        }
     }
 
 }

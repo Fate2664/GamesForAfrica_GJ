@@ -17,7 +17,7 @@ public class MenuManager : MonoBehaviour
     public void StartGame()
     {
         AudioManager.Instance?.StopSFX("MenuMusic");
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Tutorial Map");
     }
 
     public void QuitGame()

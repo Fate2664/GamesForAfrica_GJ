@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 2576996243794536284}
   - component: {fileID: 819896490155482573}
   - component: {fileID: 3537516546931900599}
+  - component: {fileID: 3120380142557382650}
   m_Layer: 0
   m_Name: Shooting_Enemy
   m_TagString: Enemy
@@ -229,3 +230,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &3120380142557382650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6788955611648209837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94409cdeee244bc4294ddc4d14bf4a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  contactDamage: 10
+  damageCooldown: 1
+  contacDamage: 5
+  knockbackX: 5
+  knockbackY: 2
+  currencyPrefab: {fileID: 0}
+  damageParticles: {fileID: 2148263299724491560, guid: 6f139873c98f96f46af98ab4525c1f3a, type: 3}
+  deathParticles: {fileID: 2148263299724491560, guid: b97c04f4fb15ab748b927d3a0c666664, type: 3}
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  playerStats: {fileID: 0}

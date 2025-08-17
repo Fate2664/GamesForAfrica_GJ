@@ -12,7 +12,7 @@ public class TUT_EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-       // enemy = enemyPrefab
+       //enemy = enemyPrefab
     }
     public void SpawnEnemy()
     {
