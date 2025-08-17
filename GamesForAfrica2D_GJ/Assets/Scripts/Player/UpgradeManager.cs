@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
-
-    public UpgradeData upgradeData;
     public PlayerStats playerStats;
 
     private void Awake()
