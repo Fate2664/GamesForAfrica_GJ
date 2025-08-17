@@ -1,4 +1,6 @@
+using NUnit.Framework;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class TUT_EnemySpawner : MonoBehaviour
 {
@@ -6,7 +8,12 @@ public class TUT_EnemySpawner : MonoBehaviour
     public Transform[] spawnPoint;
     public GameObject[] enemyPrefab;
 
+    private List<Enemy> enemy;
 
+    private void Start()
+    {
+       // enemy = enemyPrefab
+    }
     public void SpawnEnemy()
     {
         if (enemyPrefab.Length == 0 || spawnPoint == null)
