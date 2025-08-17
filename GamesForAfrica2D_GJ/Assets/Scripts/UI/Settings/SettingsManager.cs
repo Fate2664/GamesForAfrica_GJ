@@ -102,7 +102,7 @@ public class SettingsManager : MonoBehaviour
         return defaultValue;
     }
 
-    public bool ParticEnabled => GetBool("ParticlesEnabled", true);
+    public bool ParticlesEnabled => GetBool("ParticlesEnabled", true);
     public int Difficulty => GetInt("Difficulty", 0);
     public float MasterVolume => GetFloat("MasterVolume", 1f);
     public float MusicVolume => GetFloat("Music", 1f);

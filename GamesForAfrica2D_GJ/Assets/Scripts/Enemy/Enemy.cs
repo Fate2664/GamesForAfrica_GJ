@@ -1,31 +1,107 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IDamageable
 {
-    public float MaxHP;
-    float HP;
-    public float Speed;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [Header("Health & Damage")]
+    [SerializeField] private float maxHealth = 100;
+    [SerializeField] public int contactDamage = 10;
+    [SerializeField] private float damageCooldown = 1f;
+
+    [Header("Knockback")]
+    [SerializeField] public float knockbackX = 5f;
+    [SerializeField] public float knockbackY = 2f;
+
+    [Header("Particles & Visuals")]
+    [SerializeField] private GameObject currencyPrefab;
+    [SerializeField] private ParticleSystem damageParticles;
+    [SerializeField] private ParticleSystem deathParticles;
+    [SerializeField] private Color damageColor = Color.red;
+
+    private float currentHP;
+    private float lastDamageTime = -999f;
+    private Coroutine damageCoroutine;
+    private bool isKnockback = false;
+    private Rigidbody2D rb;
+
+    public float Health
     {
-        HP = MaxHP;
+        get => currentHP;
+        set => currentHP = value;
     }
 
-    // Update is called once per frame
+    public float MaxHealth
+    {
+        get => maxHealth;
+        set => maxHealth = value;
+    }
+
+    public bool IsAlive => currentHP > 0;
+
+
+    void Start()
+    {
+        currentHP = maxHealth;
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     void Update()
     {
-        if (HP <= 0)
+        if (currentHP <= 0)
         {
             Die();
         }
     }
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, Vector2 attackDirection)
     {
-        HP -= damage;
-        Debug.Log("Hit!");
+        currentHP -= damage;
+        if (SettingsManager.Instance.ParticlesEnabled)
+        {
+            SpawnDamageParticles(attackDirection);
+        }
+
+        if (currentHP <= 0)
+        {
+            if (SettingsManager.Instance.ParticlesEnabled)
+            {
+                SpawnDeathParticles();
+            }
+            SpawnCurrency();
+            Die();
+        }
     }
     public void Die()
     {
         Destroy(gameObject);
     }
+
+    private void SpawnDamageParticles(Vector2 attackDirection)
+    {
+        if (damageParticles != null)
+        {
+            Quaternion spawnRotation = Quaternion.FromToRotation(Vector2.right, attackDirection);
+            Instantiate(damageParticles, transform.position, spawnRotation);
+        }
+    }
+
+    private void SpawnCurrency()
+    {
+        Vector2 spawnPos = (Vector2)transform.position - new Vector2(0, 1f); // Adjust spawn position as needed
+        if (currencyPrefab != null)
+        {
+            GameObject orb = Instantiate(currencyPrefab, spawnPos, Quaternion.identity);
+        }
+    }
+
+    private void SpawnDeathParticles()
+    {
+        if (deathParticles != null)
+        {
+            ParticleSystem ps = Instantiate(deathParticles, transform.position, Quaternion.identity);
+            ps.Play();
+
+            // Ensure particle system has time to finish
+            Destroy(ps.gameObject, ps.main.duration + ps.main.startLifetime.constantMax);
+        }
+    }
+
 }

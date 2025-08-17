@@ -32,9 +32,10 @@ public class Projectile : MonoBehaviour
         if (collision.collider.CompareTag("Enemy"))
         {
             Enemy enemy = collision.collider.GetComponent<Enemy>();
+            Vector2 attackDirection = (collision.transform.position - transform.position).normalized;
             if (enemy != null)
             {
-                enemy.TakeDamage(damage);
+                enemy.TakeDamage(damage, attackDirection);
             }
             DestroyProjectile();
         }

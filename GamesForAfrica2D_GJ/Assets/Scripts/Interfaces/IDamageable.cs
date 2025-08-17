@@ -4,6 +4,6 @@ public interface IDamageable
 {
     public float Health { get; set; }
     public bool IsAlive { get; }
-    public void TakeDamage(float amount);
+    public void TakeDamage(float amount, Vector2 attackDirection);
     public void Die();
 }
