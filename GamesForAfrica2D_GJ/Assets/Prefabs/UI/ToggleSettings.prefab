@@ -249,9 +249,9 @@ MonoBehaviour:
         label: {fileID: 2371267848359693030}
         CheckBox: {fileID: 3532757137734778192}
         CheckMark: {fileID: 4341760092298570994}
-        DefaultColor: {r: 0.16470589, g: 0.16470589, b: 0.2392157, a: 1}
-        HoverColor: {r: 0.16470589, g: 0.16470589, b: 0.5176471, a: 1}
-        PressedColor: {r: 0.16470589, g: 0.16470589, b: 0.7294118, a: 1}
+        DefaultColor: {r: 1, g: 1, b: 1, a: 1}
+        HoverColor: {r: 0.5256064, g: 0.5256064, b: 0.5256064, a: 1}
+        PressedColor: {r: 0.21293801, g: 0.15551841, b: 0.11450439, a: 1}
 --- !u!1 &3449926635083659551
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +280,7 @@ Transform:
   m_GameObject: {fileID: 3449926635083659551}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 83.6, y: 0, z: 0}
+  m_LocalPosition: {x: 97.75, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -316,10 +316,10 @@ MonoBehaviour:
   layout:
     Size:
       X:
-        Raw: 67.2
+        Raw: 95.5
         Type: 0
       Y:
-        Raw: 89.6
+        Raw: 95.5
         Type: 0
       Z:
         Raw: 0
@@ -440,7 +440,7 @@ MonoBehaviour:
       Z: 0
     RotateSize: 0
     AspectRatio: {x: 1, y: 1, z: 0}
-    AspectRatioAxis: 0
+    AspectRatioAxis: 1
   autoLayout:
     Axis: 0
     Spacing:
@@ -537,14 +537,14 @@ MonoBehaviour:
       Direction: 0
     Image:
       Adjustment:
-        CenterUV: {x: -0.55, y: 0}
-        UVScale: {x: 3.9, y: -7.45}
+        CenterUV: {x: -0.16, y: 0}
+        UVScale: {x: 11.89, y: 7.06}
         PixelsPerUnitMultiplier: 1
         scaleMode: 0
       Mode: 1
     SoftenEdges: 1
     FillEnabled: 1
-  texture: {fileID: 2800000, guid: 29b1062d113a62e4991f84b124370263, type: 3}
+  texture: {fileID: 2800000, guid: 01c8e09cabbe15d43b384c62ce84526f, type: 3}
   sprite: {fileID: 0}
 --- !u!114 &4074179612099467377
 MonoBehaviour:
@@ -657,10 +657,10 @@ MonoBehaviour:
   layout:
     Size:
       X:
-        Raw: 0.64285713
+        Raw: 0.493
         Type: 1
       Y:
-        Raw: 0.73214287
+        Raw: 0.499
         Type: 1
       Z:
         Raw: 0
@@ -776,8 +776,8 @@ MonoBehaviour:
       Y: 0
       Z: 0
     AutoSize:
-      X: 1
-      Y: 1
+      X: 0
+      Y: 0
       Z: 0
     RotateSize: 0
     AspectRatio: {x: 0, y: 0, z: 0}

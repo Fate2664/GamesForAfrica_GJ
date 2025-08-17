@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [Header("Enemy Settings")]
-    public Transform spawnPoint;
+    public Transform[] spawnPoint;
     public GameObject[] enemyPrefab;
 
 
@@ -13,6 +13,9 @@ public class EnemySpawner : MonoBehaviour
             return;
 
         int randomIndex = Random.Range(0, enemyPrefab.Length);
-        Instantiate(enemyPrefab[randomIndex], spawnPoint.position, Quaternion.identity);
-    }
+        for (int i = 0; i < spawnPoint.Length; i++)
+        {
+            Instantiate(enemyPrefab[randomIndex], spawnPoint[i].position, Quaternion.identity);
+
+        }    }
 }

@@ -32,7 +32,7 @@ public class EnemyAI : MonoBehaviour
         {
             return; // No path to follow
         }
-        if (lookRange.inLookRange)
+        if (true)
         {
 
             if (currentWaypoint >= path.vectorPath.Count)
