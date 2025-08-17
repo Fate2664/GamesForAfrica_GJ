@@ -1,16 +1,25 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-public class UpgradeOption
-{
-    public string name;
-    public Sprite icon;
-    public string description;
-    public System.Action applyUpgrade;
-}
+
 public class UpgradeManager : MonoBehaviour
 {
 
+    public UpgradeData upgradeData;
+    public PlayerStats playerStats;
+
+    private void Awake()
+    {
+        playerStats = GetComponent<PlayerStats>();
+    }
+
+    public void BuyUpgrade(UpgradeData upgrade)
+    {
+        if (upgrade.cost > PlayerStats.baseMoney)
+            return;
+        playerStats.UpgradeStat(upgrade.stat);
+        playerStats.money -= upgrade.cost;
+    }
 
 }
 

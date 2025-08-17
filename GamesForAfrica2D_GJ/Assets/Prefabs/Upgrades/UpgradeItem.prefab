@@ -623,6 +623,9 @@ MonoBehaviour:
         releaseAnimation:
           Target: {fileID: 6014683564848393473}
           TargetColor: {r: 0.21293801, g: 0.15551841, b: 0.11450439, a: 0}
+        manager: {fileID: 0}
+        data: {fileID: 0}
+        stat: 0
 --- !u!114 &1425307112613128067
 MonoBehaviour:
   m_ObjectHideFlags: 0
