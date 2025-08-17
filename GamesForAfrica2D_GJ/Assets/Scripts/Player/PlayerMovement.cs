@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Move()
     {
-        Vector3 movement = new Vector3(movementInput.x, movementInput.y, 0f) * CurrentStats.MoveSpeed * Time.deltaTime;
+        Vector3 movement = new Vector3(movementInput.x, movementInput.y, 0f) * CurrentStats.moveSpeed * Time.deltaTime;
         transform.Translate(movement,Space.World);
     }
 }

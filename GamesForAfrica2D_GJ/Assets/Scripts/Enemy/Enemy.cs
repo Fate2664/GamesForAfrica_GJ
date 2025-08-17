@@ -111,7 +111,7 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public void ApplyKnockback(Vector2 direction, float force)
     {
-        if (!playerStats.IsAlive) return;
+        //if (!playerStats.IsAlive) return;
 
         isKnockback = true;
         Invoke(nameof(ResetKnockback), 0.8f); // Reset knockback after 0.8 seconds

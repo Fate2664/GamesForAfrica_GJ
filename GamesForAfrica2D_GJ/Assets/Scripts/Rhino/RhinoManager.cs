@@ -34,4 +34,9 @@ public class RhinoManager : MonoBehaviour, IDamageable
         Debug.Log("Rhino has died.");
         // Add death logic here, such as playing an animation or dropping loot
     }
+
+    public void ApplyKnockback(Vector2 direction, float force)
+    {
+        throw new System.NotImplementedException();
+    }
 }

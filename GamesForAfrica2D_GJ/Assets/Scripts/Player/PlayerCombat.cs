@@ -27,7 +27,7 @@ public class PlayerCombat : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!playerStats.IsAlive) { return; }
+       // if (!playerStats.IsAlive) { return; }
         Attack();
     }
 
