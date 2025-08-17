@@ -73,8 +73,6 @@ public class PlayerStats : MonoBehaviour
                 break;
         }
     }
-<<<<<<< HEAD
-=======
     private void UpgradeAttackDamage()
     {
         attackDamage += baseAttackDamage * baseUpgradeValue;
@@ -114,6 +112,5 @@ public class PlayerStats : MonoBehaviour
     {
         moveSpeed += baseMoveSpeed * baseUpgradeValue;
     }
->>>>>>> fb7dc63457bc67b404089cca30499d36c52ee2dc
 
 }

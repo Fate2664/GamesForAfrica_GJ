@@ -109,7 +109,6 @@ public class Enemy : MonoBehaviour, IDamageable
         }
     }
 
-<<<<<<< HEAD
     public void ApplyKnockback(Vector2 direction, float force)
     {
         if (!playerStats.IsAlive) return;
@@ -146,19 +145,6 @@ public class Enemy : MonoBehaviour, IDamageable
             elapsed += flashSpeed * 2;
         }
         spriteRenderer.color = Color.white;
-=======
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Rhino"))
-        {
-            if (Time.time - lastDamageTime >= damageCooldown)
-            {
-                lastDamageTime = Time.time;
-                Vector2 attackDirection = (collision.transform.position - transform.position).normalized;
-                collision.gameObject.GetComponent<IDamageable>().TakeDamage(contactDamage, attackDirection);
-            }
-        }
->>>>>>> fb7dc63457bc67b404089cca30499d36c52ee2dc
     }
 
 }

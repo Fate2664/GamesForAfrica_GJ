@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rhino_health_cardd_0: 5384331405618978595
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

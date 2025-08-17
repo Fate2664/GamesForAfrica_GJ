@@ -35,12 +35,8 @@ public class Projectile : MonoBehaviour
             Vector2 attackDirection = (collision.transform.position - transform.position).normalized;
             if (enemy != null)
             {
-<<<<<<< HEAD
-                damageable.TakeDamage(damage, attackDirection);
-                damageable.ApplyKnockback(attackDirection, 5f);
-=======
                 enemy.TakeDamage(damage, attackDirection);
->>>>>>> fb7dc63457bc67b404089cca30499d36c52ee2dc
+                enemy.ApplyKnockback(attackDirection, 5f);
             }
             DestroyProjectile();
         }
