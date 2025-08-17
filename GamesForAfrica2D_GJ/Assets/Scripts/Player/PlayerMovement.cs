@@ -6,16 +6,19 @@ using UnityEngine.UIElements;
 public class PlayerMovement : MonoBehaviour
 {
     public PlayerStats BaseStats;
-    public PlayerStats CurrentStats;
-    private float LastAttackTime;
     public Projectile BulletPrefab;
     private Vector2 movementInput;
+    private PlayerStats CurrentStats;
+    private float LastAttackTime;
+    private Animator animator;
+    private Vector2 lastPosition;
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
+        lastPosition = transform.position;
         ResetStats();
         LastAttackTime = 0;
-
     }
     void Start()
     {
@@ -24,7 +27,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         GetInput();
-        Debug.DrawRay(transform.position, Vector2.right * CurrentStats.attackRange, Color.red, 1f);
+        if(Input.GetAxisRaw("Horizontal")>0|| Input.GetAxisRaw("Vertical")>0)
+            animator.SetBool("Walking", true);
+        else
+            animator.SetBool("Walking", false);
     }
 
     void GetInput()
@@ -55,7 +61,6 @@ public class PlayerMovement : MonoBehaviour
             FindTarget();
             LastAttackTime = Time.time;
         }
-
     }
 
     void FindTarget()
@@ -68,7 +73,6 @@ public class PlayerMovement : MonoBehaviour
         }
         GameObject nearestEnemy = null;
         float closestDistance = Mathf.Infinity;
-
         foreach (GameObject enemy in enemies)
         {
             float distance = Vector2.Distance(transform.position, enemy.transform.position);
@@ -78,7 +82,6 @@ public class PlayerMovement : MonoBehaviour
                 nearestEnemy = enemy;
             }
         }
-
         if (nearestEnemy != null&&closestDistance<=CurrentStats.attackRange)
         {
             Shoot(nearestEnemy.transform.position);
@@ -89,7 +92,6 @@ public class PlayerMovement : MonoBehaviour
         float angleStep = CurrentStats.spreadAngle / (CurrentStats.bullets - 1);
         float startAngle = -CurrentStats.spreadAngle / 2f;
         Vector2 baseDirection = (target - transform.position).normalized;
-
         for (int i = 0; i < CurrentStats.bullets; i++)
         {
             float currentAngle = startAngle + (angleStep * i);
@@ -102,10 +104,17 @@ public class PlayerMovement : MonoBehaviour
                 Quaternion.identity
             );
             Projectile projScript = projectile.GetComponent<Projectile>();
-            projScript.direction = pelletDirection;
-            projScript.speed = CurrentStats.bulletSpeed;
-            projScript.damage = CurrentStats.attackDamage / CurrentStats.bullets;
-            projScript.maxDistance = CurrentStats.attackRange;
+            if (projScript == null)
+            {
+                Debug.Log("No projectile script found");
+            }
+            else
+            {
+                projScript.direction = pelletDirection;
+                projScript.speed = CurrentStats.bulletSpeed;
+                projScript.damage = CurrentStats.attackDamage;
+                projScript.maxDistance = CurrentStats.attackRange;
+            }
         }
     }
     void ResetStats()
