@@ -19,7 +19,7 @@ public class EnemyAI : MonoBehaviour
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        target = GameObject.FindGameObjectWithTag("Rhino").transform;
         lookRange = GetComponentInChildren<EnemyLookRange>();
         InvokeRepeating("UpdatePath", 0f, 0.5f); // Update path every 0.5 seconds
 

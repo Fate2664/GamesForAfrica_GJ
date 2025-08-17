@@ -12,6 +12,7 @@ TagManager:
   - TallGrass
   - Snake
   - Leaderboard
+  - Rhino
   layers:
   - Default
   - TransparentFX

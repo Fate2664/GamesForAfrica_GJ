@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class TUT_EnemySpawner : MonoBehaviour
 {
     [Header("Enemy Settings")]
     public Transform[] spawnPoint;
@@ -17,5 +17,6 @@ public class EnemySpawner : MonoBehaviour
         {
             Instantiate(enemyPrefab[randomIndex], spawnPoint[i].position, Quaternion.identity);
 
-        }    }
+        }   
+    }
 }
