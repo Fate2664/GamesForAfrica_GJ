@@ -1,7 +1,9 @@
 using UnityEngine;
+using System.Collections;
 
-public class Enemy : MonoBehaviour, IDamageable
+public class Enemy : MonoBehaviour
 {
+<<<<<<< HEAD
     [Header("Health & Damage")]
     [SerializeField] private float maxHealth = 100;
     [SerializeField] public int contactDamage = 10;
@@ -16,6 +18,9 @@ public class Enemy : MonoBehaviour, IDamageable
     [SerializeField] private ParticleSystem damageParticles;
     [SerializeField] private ParticleSystem deathParticles;
     [SerializeField] private Color damageColor = Color.red;
+
+    [Header("Connections")] 
+    [SerializeField] private PlayerStats playerStats;
 
     private float currentHP;
     private float lastDamageTime = -999f;
@@ -38,41 +43,35 @@ public class Enemy : MonoBehaviour, IDamageable
     public bool IsAlive => currentHP > 0;
 
 
+=======
+    public float MaxHP;
+    float HP;
+    public float Speed;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+>>>>>>> parent of 4b60155 (Refactored your player code.)
     void Start()
     {
-        currentHP = maxHealth;
-        rb = GetComponent<Rigidbody2D>();
+        HP = MaxHP;
     }
 
+    // Update is called once per frame
     void Update()
     {
-        if (currentHP <= 0)
+        if (HP <= 0)
         {
             Die();
         }
     }
-    public void TakeDamage(float damage, Vector2 attackDirection)
+    public void TakeDamage(float damage)
     {
-        currentHP -= damage;
-        if (SettingsManager.Instance.ParticlesEnabled)
-        {
-            SpawnDamageParticles(attackDirection);
-        }
-
-        if (currentHP <= 0)
-        {
-            if (SettingsManager.Instance.ParticlesEnabled)
-            {
-                SpawnDeathParticles();
-            }
-            SpawnCurrency();
-            Die();
-        }
+        HP -= damage;
+        Debug.Log("Hit!");
     }
     public void Die()
     {
         Destroy(gameObject);
     }
+<<<<<<< HEAD
 
     private void SpawnDamageParticles(Vector2 attackDirection)
     {
@@ -104,4 +103,44 @@ public class Enemy : MonoBehaviour, IDamageable
         }
     }
 
+    public void ApplyKnockback(Vector2 direction, float force)
+    {
+        if (!playerStats.IsAlive) return;
+
+        isKnockback = true;
+        Invoke(nameof(ResetKnockback), 0.8f); // Reset knockback after 0.8 seconds
+
+        if (damageCoroutine != null)
+        {
+            StopCoroutine(damageCoroutine);
+        }
+        damageCoroutine = StartCoroutine(Damage(0.5f)); // Flash for 0.5 seconds
+
+        rb.linearVelocity = Vector2.zero;
+        rb.AddForce(direction.normalized * force, ForceMode2D.Impulse);
+
+        // Debug.DrawRay(transform.position, knockback, Color.red, 1f);
+    }
+    private void ResetKnockback()
+    {
+        isKnockback = false;
+    }
+
+    private IEnumerator Damage(float duration, float flashSpeed = 0.1f)
+    {
+        SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            spriteRenderer.color = damageColor;
+            yield return new WaitForSeconds(flashSpeed);
+            spriteRenderer.color = Color.white;
+            yield return new WaitForSeconds(flashSpeed);
+            elapsed += flashSpeed * 2;
+        }
+        spriteRenderer.color = Color.white;
+    }
+
+=======
+>>>>>>> parent of 4b60155 (Refactored your player code.)
 }
