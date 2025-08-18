@@ -1,0 +1,1157 @@
+fileFormatVersion: 2
+guid: 4727b87daec23674dbcb18cb25d1ce5f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7950208988635912004
+    second: Rhino_death_0
+  - first:
+      213: -5912327578283314261
+    second: Rhino_death_1
+  - first:
+      213: 1326599155926152495
+    second: Rhino_death_2
+  - first:
+      213: 8700645057655550847
+    second: Rhino_death_3
+  - first:
+      213: -6980782636821232319
+    second: Rhino_death_4
+  - first:
+      213: -331534627399190135
+    second: Rhino_death_5
+  - first:
+      213: 7601881018892290240
+    second: Rhino_death_6
+  - first:
+      213: 6616062085685052195
+    second: Rhino_death_7
+  - first:
+      213: 6955669454957049070
+    second: Rhino_death_8
+  - first:
+      213: 3398008228175074104
+    second: Rhino_death_9
+  - first:
+      213: 821357601331335552
+    second: Rhino_death_10
+  - first:
+      213: -7017600295390697437
+    second: Rhino_death_11
+  - first:
+      213: -8079415717033205175
+    second: Rhino_death_12
+  - first:
+      213: 8034377820175083895
+    second: Rhino_death_13
+  - first:
+      213: 1366380374545796456
+    second: Rhino_death_14
+  - first:
+      213: 1798953778359279443
+    second: Rhino_death_15
+  - first:
+      213: 6321071320678468429
+    second: Rhino_death_16
+  - first:
+      213: -8990629533879215368
+    second: Rhino_death_17
+  - first:
+      213: 2635125643922903950
+    second: Rhino_death_18
+  - first:
+      213: 8581306289244275593
+    second: Rhino_death_19
+  - first:
+      213: 5133639308997514346
+    second: Rhino_death_20
+  - first:
+      213: 6926574405040230241
+    second: Rhino_death_21
+  - first:
+      213: 2438963914186090497
+    second: Rhino_death_22
+  - first:
+      213: -1854891340601610645
+    second: Rhino_death_23
+  - first:
+      213: -2939302671089119223
+    second: Rhino_death_24
+  - first:
+      213: 2863996895353414168
+    second: Rhino_death_25
+  - first:
+      213: -8789770102963050321
+    second: Rhino_death_26
+  - first:
+      213: 7656365404983492162
+    second: Rhino_death_27
+  - first:
+      213: -1949892991704546401
+    second: Rhino_death_28
+  - first:
+      213: 8498202493632470655
+    second: Rhino_death_29
+  - first:
+      213: -3765422326013465855
+    second: Rhino_death_30
+  - first:
+      213: 1220228002951288014
+    second: Rhino_death_31
+  - first:
+      213: -625358943039963142
+    second: Rhino_death_32
+  - first:
+      213: -3600499293325353902
+    second: Rhino_death_33
+  - first:
+      213: 8068184047522003825
+    second: Rhino_death_34
+  - first:
+      213: 5383116875751814697
+    second: Rhino_death_35
+  - first:
+      213: 2786064077669222235
+    second: Rhino_death_36
+  - first:
+      213: -4537778140886077975
+    second: Rhino_death_37
+  - first:
+      213: -1604584309962027415
+    second: Rhino_death_38
+  - first:
+      213: -7385072540779749250
+    second: Rhino_death_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rhino_death_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 271
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb82d3efb0f2ba190800000000000000
+      internalID: -7950208988635912004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 271
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba37da4746133fda0800000000000000
+      internalID: -5912327578283314261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 271
+        width: 13
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f25bf4857e6096210800000000000000
+      internalID: 1326599155926152495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_3
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 271
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f73315af496eeb870800000000000000
+      internalID: 8700645057655550847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_4
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 271
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1454e067d274f1f90800000000000000
+      internalID: -6980782636821232319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 271
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 989312f4307266bf0800000000000000
+      internalID: -331534627399190135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_6
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 271
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c80cdb928e4f7960800000000000000
+      internalID: 7601881018892290240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_7
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 271
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 323003dd969f0db50800000000000000
+      internalID: 6616062085685052195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_8
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 271
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee4ffbd3480878060800000000000000
+      internalID: 6955669454957049070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_9
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 271
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 833da38ea76282f20800000000000000
+      internalID: 3398008228175074104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_10
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 245
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 081dbecf26c066b00800000000000000
+      internalID: 821357601331335552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_11
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 245
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 328af8156b97c9e90800000000000000
+      internalID: -7017600295390697437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_12
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 245
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9422781463620ef80800000000000000
+      internalID: -8079415717033205175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_13
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 245
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77920da3f08df7f60800000000000000
+      internalID: 8034377820175083895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_14
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 245
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86d0ed416bb56f210800000000000000
+      internalID: 1366380374545796456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_15
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 245
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35f937e1eea27f810800000000000000
+      internalID: 1798953778359279443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_16
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 245
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4b03fc20e4f8b750800000000000000
+      internalID: 6321071320678468429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_17
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 245
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fa5ef5c21eda3380800000000000000
+      internalID: -8990629533879215368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_18
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 245
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e831c88cfc8d19420800000000000000
+      internalID: 2635125643922903950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_19
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 245
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9830b37ba9ce61770800000000000000
+      internalID: 8581306289244275593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_20
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 245
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6457c990c95e3740800000000000000
+      internalID: 5133639308997514346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_21
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 245
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16f4cba09b2202060800000000000000
+      internalID: 6926574405040230241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_22
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 245
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 108ee0df1c0f8d120800000000000000
+      internalID: 2438963914186090497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_23
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 245
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6e2e72472a1246e0800000000000000
+      internalID: -1854891340601610645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_24
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 253
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90050623bcf7537d0800000000000000
+      internalID: -2939302671089119223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_25
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 245
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 812ac519006feb720800000000000000
+      internalID: 2863996895353414168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_26
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 220
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa8e98b59a6740680800000000000000
+      internalID: -8789770102963050321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_27
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 220
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24e71aa45cfd04a60800000000000000
+      internalID: 7656365404983492162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_28
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 220
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f934d6fa7a690f4e0800000000000000
+      internalID: -1949892991704546401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_29
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 220
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7e5d4e742eafe570800000000000000
+      internalID: 8498202493632470655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_30
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 220
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b64a438588ebbc0800000000000000
+      internalID: -3765422326013465855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_31
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 220
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec455e457ee1fe010800000000000000
+      internalID: 1220228002951288014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_32
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 220
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff3df6ca574257f0800000000000000
+      internalID: -625358943039963142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_33
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 220
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c1c4f08f4780ec0800000000000000
+      internalID: -3600499293325353902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_34
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 220
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17bb507e4a2f7ff60800000000000000
+      internalID: 8068184047522003825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_35
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 220
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 926f89b074ca4ba40800000000000000
+      internalID: 5383116875751814697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_36
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 231
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5743f674861aa620800000000000000
+      internalID: 2786064077669222235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_37
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 231
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ede3f2b2d29601c0800000000000000
+      internalID: -4537778140886077975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_38
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 142
+        width: 146
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96e4c80521f5bb9e0800000000000000
+      internalID: -1604584309962027415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rhino_death_39
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 76
+        width: 146
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e70e456e6a3f28990800000000000000
+      internalID: -7385072540779749250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Rhino_death_0: -7950208988635912004
+      Rhino_death_1: -5912327578283314261
+      Rhino_death_10: 821357601331335552
+      Rhino_death_11: -7017600295390697437
+      Rhino_death_12: -8079415717033205175
+      Rhino_death_13: 8034377820175083895
+      Rhino_death_14: 1366380374545796456
+      Rhino_death_15: 1798953778359279443
+      Rhino_death_16: 6321071320678468429
+      Rhino_death_17: -8990629533879215368
+      Rhino_death_18: 2635125643922903950
+      Rhino_death_19: 8581306289244275593
+      Rhino_death_2: 1326599155926152495
+      Rhino_death_20: 5133639308997514346
+      Rhino_death_21: 6926574405040230241
+      Rhino_death_22: 2438963914186090497
+      Rhino_death_23: -1854891340601610645
+      Rhino_death_24: -2939302671089119223
+      Rhino_death_25: 2863996895353414168
+      Rhino_death_26: -8789770102963050321
+      Rhino_death_27: 7656365404983492162
+      Rhino_death_28: -1949892991704546401
+      Rhino_death_29: 8498202493632470655
+      Rhino_death_3: 8700645057655550847
+      Rhino_death_30: -3765422326013465855
+      Rhino_death_31: 1220228002951288014
+      Rhino_death_32: -625358943039963142
+      Rhino_death_33: -3600499293325353902
+      Rhino_death_34: 8068184047522003825
+      Rhino_death_35: 5383116875751814697
+      Rhino_death_36: 2786064077669222235
+      Rhino_death_37: -4537778140886077975
+      Rhino_death_38: -1604584309962027415
+      Rhino_death_39: -7385072540779749250
+      Rhino_death_4: -6980782636821232319
+      Rhino_death_5: -331534627399190135
+      Rhino_death_6: 7601881018892290240
+      Rhino_death_7: 6616062085685052195
+      Rhino_death_8: 6955669454957049070
+      Rhino_death_9: 3398008228175074104
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

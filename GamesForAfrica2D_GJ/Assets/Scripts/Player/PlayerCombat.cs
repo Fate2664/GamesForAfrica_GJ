@@ -36,7 +36,6 @@ public class PlayerCombat : MonoBehaviour
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (enemies.Length == 0)
         {
-            Debug.Log("No enemies");
             return;
         }
         GameObject nearestEnemy = null;

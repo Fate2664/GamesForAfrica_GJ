@@ -3,7 +3,9 @@ using UnityEngine;
 public class RhinoManager : MonoBehaviour, IDamageable
 {
     [Header("Health")]
-    [SerializeField] private float maxHealth = 100f;
+    [SerializeField] private float maxHealth = 1000f;
+    [SerializeField] private HealthBarView healthBarView;
+    [SerializeField] private DeathScreen deathScreen;
 
     [Header("Particle Effects")]
     [SerializeField] private ParticleSystem damageParticles;
@@ -21,6 +23,10 @@ public class RhinoManager : MonoBehaviour, IDamageable
     private void Start()
     {
         currentHealth = maxHealth;
+        if (healthBarView != null)
+        {
+            healthBarView.SetHealth(currentHealth, maxHealth);
+        }
     }
  
     public void TakeDamage(float amount, Vector2 attackDirection)
@@ -28,6 +34,7 @@ public class RhinoManager : MonoBehaviour, IDamageable
         if (IsAlive)
         {
             currentHealth -= amount;
+            healthBarView?.SetHealth(currentHealth, maxHealth);
             if (SettingsManager.Instance.ParticlesEnabled)
             {
                 SpawnDamageParticles(attackDirection);
@@ -69,6 +76,7 @@ public class RhinoManager : MonoBehaviour, IDamageable
     {
         Debug.Log("Rhino has died.");
         //show death screen and trigger game over
+        deathScreen.ShowDeathScreen();
     }
 
     public void ApplyKnockback(Vector2 direction, float force)

@@ -1912,8 +1912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ef5a0ccd95d9f46b9874305d80a9c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesPerWave: 05000000
-  timeBetweenWaves: 5
+  initialEnemiesPerWave: 3
   timeBetweenSpawns: 1
   enemySpawner: {fileID: 1665888310}
 --- !u!4 &1278794450
@@ -2197,7 +2196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 321009ebd939fe4448ad1972f46b13dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 1972020187}
+  spawnPoint:
+  - {fileID: 0}
   enemyPrefab:
   - {fileID: 6788955611648209837, guid: 24cf13c8ea54fc343be4e2a2515c3d85, type: 3}
 --- !u!212 &1665888311
@@ -2273,7 +2273,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1765937895 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7721097177960101532, guid: 24cf13c8ea54fc343be4e2a2515c3d85, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4359405320185728961, guid: 24cf13c8ea54fc343be4e2a2515c3d85, type: 3}
   m_PrefabInstance: {fileID: 8541697423513752322}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1823966372
@@ -2481,6 +2481,7 @@ GameObject:
   - component: {fileID: 1939261847}
   - component: {fileID: 1939261846}
   - component: {fileID: 1939261848}
+  - component: {fileID: 1939261849}
   m_Layer: 0
   m_Name: UpgradesManager
   m_TagString: Untagged
@@ -2549,6 +2550,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 0}
+  moneyText: {fileID: 0}
+--- !u!114 &1939261849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939261845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f7b2e2eca31ee4e8738616ca8107aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradesPanel: {fileID: 1939261846}
+  upgradeItems:
+  - Name: DamageUpgrade
+    Icon: {fileID: 2800000, guid: 839545682b258ea479d07dc4f382f602, type: 3}
+  - Name: RangeUpgrade
+    Icon: {fileID: 2800000, guid: 05c76b6963ef6e6499a5f1680872184f, type: 3}
+  - Name: AttackSpeed
+    Icon: {fileID: 2800000, guid: f54d4195e664cae44bc6657f373ff783, type: 3}
+  - Name: BulletsUpgrade
+    Icon: {fileID: 2800000, guid: 04059cc7dfb0d614eac94d10382c1ae4, type: 3}
+  - Name: BulletSizeUpgrade
+    Icon: {fileID: 2800000, guid: f02d901b77eff2d48991bb2f5cedd3a4, type: 3}
+  - Name: MoveSpeedUpgrade
+    Icon: {fileID: 2800000, guid: a0c60fa7540b6e94a860605df8d66bb5, type: 3}
 --- !u!1 &1957661085
 GameObject:
   m_ObjectHideFlags: 0
@@ -3050,7 +3078,7 @@ PrefabInstance:
     - target: {fileID: 6413102143289377979, guid: 24cf13c8ea54fc343be4e2a2515c3d85, type: 3}
       propertyPath: playerStats
       value: 
-      objectReference: {fileID: 1200429961}
+      objectReference: {fileID: 0}
     - target: {fileID: 6413102143289377979, guid: 24cf13c8ea54fc343be4e2a2515c3d85, type: 3}
       propertyPath: deathParticles
       value: 

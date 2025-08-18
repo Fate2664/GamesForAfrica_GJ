@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 338c5e4989f95634c964dce3784232ed, type: 3}
-  m_Name: InventoryItems
+  m_Name: UpgradeItems
   m_EditorClassIdentifier: 
   items:
   - Name: DamageUpgrade
@@ -18,7 +18,7 @@ MonoBehaviour:
   - Name: RangeUpgrade
     Icon: {fileID: 2800000, guid: 05c76b6963ef6e6499a5f1680872184f, type: 3}
   - Name: AttackSpeed
-    Icon: {fileID: 2800000, guid: f54d4195e664cae44bc6657f373ff783, type: 3}
+    Icon: {fileID: 2800000, guid: 05c76b6963ef6e6499a5f1680872184f, type: 3}
   - Name: BulletsUpgrade
     Icon: {fileID: 2800000, guid: 04059cc7dfb0d614eac94d10382c1ae4, type: 3}
   - Name: BulletSizeUpgrade

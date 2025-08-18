@@ -9,7 +9,6 @@ public class MenuManager : MonoBehaviour
         if (!AudioManager.Instance.IsPlaying("MenuMusic"))
         {
             AudioManager.Instance.PlaySFX("MenuMusic");
-
         }   
     }
 
@@ -17,6 +16,7 @@ public class MenuManager : MonoBehaviour
     public void StartGame()
     {
         AudioManager.Instance?.StopSFX("MenuMusic");
+
         SceneManager.LoadScene("MainLevel");
     }
 

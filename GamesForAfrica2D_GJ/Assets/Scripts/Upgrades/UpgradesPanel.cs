@@ -25,18 +25,25 @@ public class UpgradesPanel : MonoBehaviour
         InitGrid(UpgradeGrid, UpgradeItems);
     }
 
-    public void AddItemToUpgradeInventory(UpgradeDescription itemDesc)
+    public void AddItemToUpgradeInventory(UpgradeDescription itemDesc, int count = 1)
     {
         var existing = UpgradeItems.Find(x => x.item == itemDesc);
-
-
-        int emptyIndex = UpgradeItems.FindIndex(x => x.isEmpty);
-        if (emptyIndex != -1)
+        //Debug.Log($"Adding item {itemDesc.Name} to upgrade inventory. Existing: {existing != null}");
+        if (existing != null)
         {
-            UpgradeItems[emptyIndex] = new UpgradeItem
+            existing.count = Mathf.Min(existing.count + count, UpgradeItem.maxCount);
+        }
+        else
+        {
+            int emptyIndex = UpgradeItems.FindIndex(x => x.isEmpty);
+            if (emptyIndex != -1)
             {
-                item = itemDesc,
-            };
+                UpgradeItems[emptyIndex] = new UpgradeItem
+                {
+                    item = itemDesc,
+                    count = count
+                };
+            } 
         }
 
 

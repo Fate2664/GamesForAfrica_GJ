@@ -13,9 +13,6 @@ public class UpgradeItemVisuals : ItemVisuals
     public BodyColorAnimation unhoverAnimation;
     public GradientColorAnimation pressAnimation;
     public GradientColorAnimation releaseAnimation;
-    public UpgradeManager manager;
-    public UpgradeData data;
-    public PlayerStats.StatType stat;
 
     private AnimationHandle hoverHandle;
     private AnimationHandle pressHandle;
@@ -36,7 +33,6 @@ public class UpgradeItemVisuals : ItemVisuals
     {
         pressHandle.Cancel();
         pressHandle = pressAnimation.Run(duration);
-        manager.BuyUpgrade(data);
     }
 
     public void Release()

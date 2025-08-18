@@ -10,7 +10,7 @@ public class WaveManager : MonoBehaviour
 
     [Header("Connections")]
     [SerializeField] private EnemySpawner enemySpawner;
-
+    [SerializeField] private UpgradeManager upgradeManager;
     private int currentWave = 0;
     private bool isUpgradePanelActive = false;
 
