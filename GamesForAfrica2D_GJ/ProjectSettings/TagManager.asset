@@ -13,6 +13,7 @@ TagManager:
   - Snake
   - Leaderboard
   - Rhino
+  - Currency
   layers:
   - Default
   - TransparentFX

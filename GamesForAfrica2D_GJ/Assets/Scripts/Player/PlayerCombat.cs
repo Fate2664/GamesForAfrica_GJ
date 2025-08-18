@@ -59,6 +59,7 @@ public class PlayerCombat : MonoBehaviour
 
     void Shoot(Vector3 target)
     {
+        AudioManager.Instance?.PlaySFX("Shoot");
         float angleStep = playerStats.spreadAngle / (playerStats.bulletCount - 1);
         float startAngle = -playerStats.spreadAngle / 2f;
         Vector2 baseDirection = (target - transform.position).normalized;

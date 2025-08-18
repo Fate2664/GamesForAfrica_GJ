@@ -3,17 +3,17 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     public enum StatType { attackDamage, attackRange, attackSpeed, bulletCount, bulletSpeed, spreadAngle, bulletSize, moveSpeed }
-    const float baseUpgradeValue=1.5f;
+    const float baseUpgradeValue = 1.5f;
     //starting stats
-    public const float baseAttackDamage=10;
+    public const float baseAttackDamage = 10;
     public const float baseAttackRange = 4;
     public const float baseAttackSpeed = 1;
-    public const float baseBulletCount=3;
+    public const float baseBulletCount = 3;
     public const float baseBulletSpeed = 5;
-    public const float baseSpreadAngle=20;
-    public const float baseBulletSize=5;
-    public const float baseMoveSpeed=3;
-    public const float baseMoney=50;
+    public const float baseSpreadAngle = 20;
+    public const float baseBulletSize = 5;
+    public const float baseMoveSpeed = 3;
+    public const float baseMoney = 50;
 
     //Attack
     public float money;
@@ -79,6 +79,11 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+
+    public void AddMoney(float amount)
+    {
+        money += amount;
+    }
     public void SpendMoney(float cost)
     {
         money -= cost;
@@ -118,9 +123,17 @@ public class PlayerStats : MonoBehaviour
         bulletSize += 1;
     }
 
-    private void UpgradeMoveSpeed() 
+    private void UpgradeMoveSpeed()
     {
         moveSpeed += baseMoveSpeed * baseUpgradeValue;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Currency"))
+        {
+            AddMoney(5);
+            Destroy(collision.gameObject); // Destroy the coin object after pickup
+        }
+    }
 }

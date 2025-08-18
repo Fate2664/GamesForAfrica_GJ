@@ -90,6 +90,7 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private void SpawnCurrency()
     {
+        Debug.Log("Spawning currency orb");
         Vector2 spawnPos = (Vector2)transform.position - new Vector2(0, 1f); // Adjust spawn position as needed
         if (currencyPrefab != null)
         {

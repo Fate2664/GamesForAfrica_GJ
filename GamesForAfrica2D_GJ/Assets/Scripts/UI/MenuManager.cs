@@ -19,6 +19,10 @@ public class MenuManager : MonoBehaviour
 
         SceneManager.LoadScene("MainLevel");
     }
+    public void LoadTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
 
     public void QuitGame()
     {

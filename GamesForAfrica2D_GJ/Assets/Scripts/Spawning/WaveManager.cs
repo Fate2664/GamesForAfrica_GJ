@@ -36,7 +36,7 @@ public class WaveManager : MonoBehaviour
             }
 
             currentWave++;
-            enemiesToSpawn += 2; // Increase by 2 each wave
+            enemiesToSpawn += 1; // Increase by 1 each wave
 
             // Wait until all enemies are destroyed before showing the upgrade panel
             yield return new WaitUntil(() => FindObjectsOfType<Enemy>().Length == 0);
