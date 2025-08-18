@@ -13,7 +13,7 @@ public class PlayerStats : MonoBehaviour
     public const float baseSpreadAngle=24;
     public const float baseBulletSize=5;
     public const float baseMoveSpeed=3;
-    public const float baseMoney=0;
+    public const float baseMoney=50;
 
     //Attack
     public float money;
@@ -28,7 +28,11 @@ public class PlayerStats : MonoBehaviour
     public float moveSpeed;
     private void Awake()
     {
+    }
+    private void Start()
+    {
         ResetStats();
+        Debug.Log($"Current money: {money} (Base: {baseMoney})");
     }
     void ResetStats()
     {
@@ -40,6 +44,7 @@ public class PlayerStats : MonoBehaviour
         spreadAngle = baseSpreadAngle;
         bulletSize = baseBulletSize;
         moveSpeed = baseMoveSpeed;
+        money = baseMoney;
     }
 
     public void UpgradeStat(StatType statType)
@@ -72,6 +77,11 @@ public class PlayerStats : MonoBehaviour
                 UpgradeMoveSpeed();
                 break;
         }
+    }
+
+    public void SpendMoney(float cost)
+    {
+        money -= cost;
     }
     private void UpgradeAttackDamage()
     {

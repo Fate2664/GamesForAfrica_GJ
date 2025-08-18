@@ -8,6 +8,6 @@ public class UpgradeData : MonoBehaviour
     public string displayName;
     public Sprite icon;
     [TextArea] public string description;
-    public int cost;
+    public float cost;
     public PlayerStats.StatType stat;
 }
