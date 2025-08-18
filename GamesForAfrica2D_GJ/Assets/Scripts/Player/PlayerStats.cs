@@ -13,7 +13,7 @@ public class PlayerStats : MonoBehaviour
     public const float baseSpreadAngle = 20;
     public const float baseBulletSize = 5;
     public const float baseMoveSpeed = 3;
-    public const float baseMoney = 50;
+    public const float baseMoney = 0;
 
     //Attack
     public float money;
@@ -132,7 +132,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (collision.CompareTag("Currency"))
         {
-            AddMoney(5);
+            AddMoney(10);
             Destroy(collision.gameObject); // Destroy the coin object after pickup
         }
     }
