@@ -6,11 +6,11 @@ public class PlayerStats : MonoBehaviour
     const float baseUpgradeValue=1.5f;
     //starting stats
     public const float baseAttackDamage=10;
-    public const float baseAttackRange = 2;
+    public const float baseAttackRange = 4;
     public const float baseAttackSpeed = 1;
     public const float baseBulletCount=3;
     public const float baseBulletSpeed = 5;
-    public const float baseSpreadAngle=24;
+    public const float baseSpreadAngle=20;
     public const float baseBulletSize=5;
     public const float baseMoveSpeed=3;
     public const float baseMoney=50;

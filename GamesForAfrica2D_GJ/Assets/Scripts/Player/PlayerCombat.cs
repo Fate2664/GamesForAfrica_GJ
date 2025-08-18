@@ -4,7 +4,7 @@ public class PlayerCombat : MonoBehaviour
 {
     [Header("Player Attack")]
     [SerializeField] private Projectile bulletPrefab;
-
+    [SerializeField] private string enemyTag;
     [Space(10)]
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private PlayerStats playerStats;
@@ -79,6 +79,8 @@ public class PlayerCombat : MonoBehaviour
             projScript.speed = playerStats.bulletSpeed;
             projScript.damage = playerStats.attackDamage / playerStats.bulletCount;
             projScript.maxDistance = playerStats.attackRange;
+            projScript.transform.localScale = new Vector3(playerStats.bulletSize, playerStats.bulletSize, 1);
+            projScript.EnemyTag = enemyTag;
         }
     }
 

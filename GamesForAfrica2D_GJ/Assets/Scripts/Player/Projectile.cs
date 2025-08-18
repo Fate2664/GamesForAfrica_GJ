@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     public Vector2 direction;
     private Vector2 spawnPosition;
     private float distanceTraveled;
+    [SerializeField] public string EnemyTag;
 
     private void Start()
     {
@@ -29,7 +30,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag(EnemyTag))
         {
             Enemy enemy = collision.GetComponent<Enemy>();
             Vector2 attackDirection = (collision.transform.position - transform.position).normalized;

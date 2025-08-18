@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3499672610018358758}
   - component: {fileID: 8015654609608478587}
   - component: {fileID: 3848739236163437951}
+  - component: {fileID: 4192406994633437369}
   m_Layer: 0
   m_Name: Shooting_Enemy
   m_TagString: Enemy
@@ -78,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f908e1afd51ea4e9465e732ca8cb64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 30
   nextWaypointDistance: 1
 --- !u!50 &7726874205549673225
 Rigidbody2D:
@@ -120,9 +121,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  contactDamage: 10
+  contactDamage: 0
   damageCooldown: 1
-  contacDamage: 5
+  contacDamage: 0
   knockbackX: 5
   knockbackY: 2
   currencyPrefab: {fileID: 0}
@@ -204,6 +205,25 @@ CapsuleCollider2D:
   m_Offset: {x: -0.3, y: 0}
   m_Size: {x: 0.74, y: 1}
   m_Direction: 0
+--- !u!114 &4192406994633437369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562112611846258837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a50dce2fecc20147b6d23877a77d5df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackDamage: 20
+  AttackRange: 6
+  AttackSpeed: 1
+  bullet: {fileID: 360819665222040174, guid: f1ac1e61754aab848841968689525adb, type: 3}
+  BulletSpeed: 5
+  BulletSize: 5
+  enemyTag: Rhino
 --- !u!1 &1802165455254012898
 GameObject:
   m_ObjectHideFlags: 0
