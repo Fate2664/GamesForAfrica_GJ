@@ -28,7 +28,7 @@ public class DeathScreen : MonoBehaviour
 
         deathScreen.SetActive(true);      //Show the death screen
         pauseVolume.ApplyPauseEffect();
-        //Time.timeScale = 0f;            //Freeze the game
+        Time.timeScale = 0f;            //Freeze the game
 
     }
 

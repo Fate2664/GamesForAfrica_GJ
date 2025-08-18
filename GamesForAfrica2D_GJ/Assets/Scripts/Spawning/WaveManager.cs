@@ -1,5 +1,5 @@
-using System.Collections;
 using UnityEngine;
+using System.Collections;
 
 public class WaveManager : MonoBehaviour
 {
@@ -10,13 +10,16 @@ public class WaveManager : MonoBehaviour
 
     [Header("Connections")]
     [SerializeField] private EnemySpawner enemySpawner;
-    [SerializeField] private UpgradeManager upgradeManager;
+    [SerializeField] private GameObject upgradePanel;
     private int currentWave = 0;
+    private UpgradeManager upgradeManager;
     private bool isUpgradePanelActive = false;
 
     private void Start()
     {
         StartCoroutine(SpawnWaves());
+        upgradePanel.SetActive(false); 
+        upgradeManager = upgradePanel.GetComponent<UpgradeManager>();
     }
 
     private IEnumerator SpawnWaves()
@@ -35,6 +38,9 @@ public class WaveManager : MonoBehaviour
             currentWave++;
             enemiesToSpawn += 2; // Increase by 2 each wave
 
+            // Wait until all enemies are destroyed before showing the upgrade panel
+            yield return new WaitUntil(() => FindObjectsOfType<Enemy>().Length == 0);
+
             // Show upgrade panel and wait until it is closed
             ShowUpgradePanel();
             yield return new WaitUntil(() => !isUpgradePanelActive);
@@ -44,14 +50,13 @@ public class WaveManager : MonoBehaviour
     private void ShowUpgradePanel()
     {
         isUpgradePanelActive = true;
-        // Your code to enable/show the upgrade panel goes here
-        // For example: upgradePanel.SetActive(true);
+        upgradePanel.SetActive(true);
     }
 
     // Call this from your UI when the player closes the upgrade panel
     public void OnUpgradePanelClosed()
     {
         isUpgradePanelActive = false;
-        // For example: upgradePanel.SetActive(false);
+        upgradePanel.SetActive(false);
     }
 }

@@ -2213,6 +2213,11 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &480482544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5209485190324903994, guid: ab3dd24057956b64ebad1e0e802b3b28, type: 3}
+  m_PrefabInstance: {fileID: 1952251796}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &524546256
 GameObject:
   m_ObjectHideFlags: 0
@@ -30824,7 +30829,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1567008448
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31398,7 +31403,7 @@ MonoBehaviour:
   initialEnemiesPerWave: 1
   timeBetweenSpawns: 3
   enemySpawner: {fileID: 1681460483}
-  upgradeManager: {fileID: 1952251798}
+  upgradePanel: {fileID: 480482544}
 --- !u!4 &1769581256
 Transform:
   m_ObjectHideFlags: 0
@@ -31622,6 +31627,18 @@ PrefabInstance:
       propertyPath: stat
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2153416698239672969, guid: ab3dd24057956b64ebad1e0e802b3b28, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1769581255}
+    - target: {fileID: 2153416698239672969, guid: ab3dd24057956b64ebad1e0e802b3b28, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnUpgradePanelClosed
+      objectReference: {fileID: 0}
+    - target: {fileID: 2153416698239672969, guid: ab3dd24057956b64ebad1e0e802b3b28, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WaveManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3103982994628511225, guid: ab3dd24057956b64ebad1e0e802b3b28, type: 3}
       propertyPath: cost
       value: 10
@@ -31689,6 +31706,10 @@ PrefabInstance:
     - target: {fileID: 5209485190324903994, guid: ab3dd24057956b64ebad1e0e802b3b28, type: 3}
       propertyPath: m_Name
       value: UpgradeMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5209485190324903994, guid: ab3dd24057956b64ebad1e0e802b3b28, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5254344925495152445, guid: ab3dd24057956b64ebad1e0e802b3b28, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -31792,17 +31813,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 142114311544548443, guid: ab3dd24057956b64ebad1e0e802b3b28, type: 3}
   m_PrefabInstance: {fileID: 1952251796}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1952251798 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5025173914616218703, guid: ab3dd24057956b64ebad1e0e802b3b28, type: 3}
-  m_PrefabInstance: {fileID: 1952251796}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3da3d4952af17141814c1defc621a14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
