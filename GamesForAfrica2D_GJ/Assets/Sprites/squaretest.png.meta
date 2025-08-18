@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7700e023dc56a684e8017e8ba6ecaf0a
+guid: 6f650dc277fab6741876abae40cd2cb6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4851455166573753226
-    second: enemy_1_0
+      213: 2261793737310736961
+    second: squaretest_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy_1_0
+      name: squaretest_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 47
+        width: 96
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a83bc5715c4d35340800000000000000
-      internalID: 4851455166573753226
+      spriteID: 1421c9bab61836f10800000000000000
+      internalID: 2261793737310736961
       vertices: []
       indices: 
       edges: []
@@ -138,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      enemy_1_0: 4851455166573753226
+      squaretest_0: 2261793737310736961
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

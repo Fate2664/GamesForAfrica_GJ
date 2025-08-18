@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1161177806510863784}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 130, z: 0}
+  m_LocalPosition: {x: 0.5, y: 130, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -225,7 +225,7 @@ MonoBehaviour:
     LightingModel: 0
     ShadowCastingMode: 2
     ReceiveShadows: 1
-  PreviewSize: {x: 1, y: 1, z: 0}
+  PreviewSize: {x: 1, y: 80, z: 0}
 --- !u!114 &8631518629621189196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,14 +279,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3449926635083659551}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 85, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 83.6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2299403611783158970}
   m_Father: {fileID: 2197701970465649210}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &6810801441034424349
 MonoBehaviour:
   m_ObjectHideFlags: 10
@@ -316,10 +316,10 @@ MonoBehaviour:
   layout:
     Size:
       X:
-        Raw: 70
+        Raw: 67.2
         Type: 0
       Y:
-        Raw: 70
+        Raw: 89.6
         Type: 0
       Z:
         Raw: 0
@@ -440,7 +440,7 @@ MonoBehaviour:
       Z: 0
     RotateSize: 0
     AspectRatio: {x: 1, y: 1, z: 0}
-    AspectRatioAxis: 1
+    AspectRatioAxis: 0
   autoLayout:
     Axis: 0
     Spacing:
@@ -478,7 +478,7 @@ MonoBehaviour:
     ReceiveShadows: 1
   PreviewSize: {x: 1, y: 1, z: 0}
   visuals:
-    Color: {r: 0.16470589, g: 0.16470589, b: 0.2392157, a: 1}
+    Color: {r: 1, g: 1, b: 1, a: 1}
     CornerRadius:
       Raw: 8
       Type: 0
@@ -516,15 +516,15 @@ MonoBehaviour:
       Width:
         Raw: 4
         Type: 0
-      Enabled: 1
+      Enabled: 0
       Direction: 2
     Shadow:
-      Color: {r: 0.16470589, g: 0.15294118, b: 0.3529412, a: 1}
+      Color: {r: 0.42318046, g: 0.31293145, b: 0.23668446, a: 1}
       Width:
-        Raw: 12.32
+        Raw: 1.32
         Type: 0
       Blur:
-        Raw: 12.02
+        Raw: 9.42
         Type: 0
       Offset:
         X:
@@ -533,18 +533,18 @@ MonoBehaviour:
         Y:
           Raw: 0
           Type: 0
-      Enabled: 1
-      Direction: 1
+      Enabled: 0
+      Direction: 0
     Image:
       Adjustment:
-        CenterUV: {x: 0, y: 0}
-        UVScale: {x: 1, y: 1}
+        CenterUV: {x: -0.55, y: 0}
+        UVScale: {x: 3.9, y: -7.45}
         PixelsPerUnitMultiplier: 1
-        scaleMode: 1
+        scaleMode: 0
       Mode: 1
     SoftenEdges: 1
     FillEnabled: 1
-  texture: {fileID: 0}
+  texture: {fileID: 2800000, guid: 29b1062d113a62e4991f84b124370263, type: 3}
   sprite: {fileID: 0}
 --- !u!114 &4074179612099467377
 MonoBehaviour:
@@ -621,13 +621,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8443616201475547514}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 70985677398901757}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &7503769570449303525
 MonoBehaviour:
   m_ObjectHideFlags: 10
@@ -657,10 +657,10 @@ MonoBehaviour:
   layout:
     Size:
       X:
-        Raw: 0.6571429
+        Raw: 0.64285713
         Type: 1
       Y:
-        Raw: 0.6571429
+        Raw: 0.73214287
         Type: 1
       Z:
         Raw: 0
@@ -835,7 +835,7 @@ MonoBehaviour:
       FillAngle: 90
       Enabled: 0
     Gradient:
-      Color: {r: 0.16470589, g: 0.16470589, b: 0.5176471, a: 1}
+      Color: {r: 0.92452824, g: 0.7508604, b: 0.5469917, a: 1}
       Center:
         X:
           Raw: -0.11400509
