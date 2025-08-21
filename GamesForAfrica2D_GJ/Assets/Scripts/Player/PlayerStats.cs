@@ -32,7 +32,6 @@ public class PlayerStats : MonoBehaviour
     private void Start()
     {
         ResetStats();
-        Debug.Log($"Current money: {money} (Base: {baseMoney})");
     }
     void ResetStats()
     {

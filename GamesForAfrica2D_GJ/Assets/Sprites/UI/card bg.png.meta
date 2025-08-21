@@ -58,17 +58,17 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 36, y: 274, z: 545, w: 50}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -84,7 +84,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -115,12 +115,12 @@ TextureImporter:
       name: card bg_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 271
-        width: 142
-        height: 164
+        x: 34
+        y: 272
+        width: 140
+        height: 162
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -137,12 +137,12 @@ TextureImporter:
       name: card bg_1
       rect:
         serializedVersion: 2
-        x: 481
-        y: 423
-        width: 6
-        height: 6
+        x: 482
+        y: 424
+        width: 4
+        height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -159,12 +159,12 @@ TextureImporter:
       name: card bg_2
       rect:
         serializedVersion: 2
-        x: 489
-        y: 425
-        width: 20
-        height: 24
+        x: 490
+        y: 426
+        width: 18
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -181,12 +181,12 @@ TextureImporter:
       name: card bg_3
       rect:
         serializedVersion: 2
-        x: 615
-        y: 417
-        width: 8
-        height: 16
+        x: 616
+        y: 418
+        width: 6
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -203,12 +203,12 @@ TextureImporter:
       name: card bg_4
       rect:
         serializedVersion: 2
-        x: 63
-        y: 99
-        width: 104
-        height: 6
+        x: 64
+        y: 100
+        width: 102
+        height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -221,12 +221,16 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    outline: []
+    outline:
+    - - {x: -323, y: 32}
+      - {x: -187, y: 32}
+      - {x: -187, y: 190}
+      - {x: -323, y: 190}
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
-    internalID: 0
+    spriteID: 0276160f462fc2b4781af074a438517c
+    internalID: 1825191197
     vertices: []
     indices: 
     edges: []

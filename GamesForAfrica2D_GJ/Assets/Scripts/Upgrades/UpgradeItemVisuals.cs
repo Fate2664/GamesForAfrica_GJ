@@ -1,4 +1,5 @@
 using Nova;
+using System;
 using UnityEngine;
 
 [System.Serializable]
@@ -8,49 +9,42 @@ public class UpgradeItemVisuals : ItemVisuals
     public UIBlock2D Image;
 
     [Header("Animations")]
-    public float duration = .15f;
-    public BodyColorAnimation hoverAnimation;
-    public BodyColorAnimation unhoverAnimation;
-    public GradientColorAnimation pressAnimation;
-    public GradientColorAnimation releaseAnimation;
-
-    private AnimationHandle hoverHandle;
-    private AnimationHandle pressHandle;
-
-    public void Hover()
-    {
-        hoverHandle.Cancel();
-        hoverHandle = hoverAnimation.Run(duration);
-    }
-
-    public void Unhover()
-    {
-        hoverHandle.Cancel();
-        hoverHandle = unhoverAnimation.Run(duration);
-    }
-
-    public void Press()
-    {
-        pressHandle.Cancel();
-        pressHandle = pressAnimation.Run(duration);
-    }
-
-    public void Release()
-    {
-        pressHandle.Cancel();
-        pressHandle = releaseAnimation.Run(duration);
-    }
+    public Color DefaultColor;
+    public Color HoverColor;
+    public Color PressedColor;
 
     public void Bind(UpgradeItem data)
     {
         if (data.isEmpty)
         {
             contentRoot.gameObject.SetActive(false);
+            Debug.Log($"UpgradeItemVisuals: Bind called with empty data at index {data.count}");
         }
         else
         {
             contentRoot.gameObject.SetActive(true);
             Image.SetImage(data.item.Icon);
         }
+    }
+
+    internal static void HandleHover(Gesture.OnHover evt, UpgradeItemVisuals target, int index)
+    {
+        target.contentRoot.Color = target.HoverColor;
+    }
+
+    internal static void HandlePress(Gesture.OnPress evt, UpgradeItemVisuals target, int index)
+    {
+        target.contentRoot.Color = target.PressedColor;
+        Debug.Log($"Pressed Upgrade");
+    }
+
+    internal static void HandleUnhover(Gesture.OnUnhover evt, UpgradeItemVisuals target, int index)
+    {
+        target.contentRoot.Color = target.DefaultColor;
+    }
+
+    internal static void HandleRelease(Gesture.OnRelease evt, UpgradeItemVisuals target, int index)
+    {
+        target.contentRoot.Color = target.HoverColor;
     }
 }

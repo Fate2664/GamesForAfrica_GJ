@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - Name: DamageUpgrade
-    Icon: {fileID: 2800000, guid: 839545682b258ea479d07dc4f382f602, type: 3}
+    Icon: {fileID: 2800000, guid: a7903bcd8a39810419371bbc095da0d8, type: 3}
   - Name: RangeUpgrade
-    Icon: {fileID: 2800000, guid: 05c76b6963ef6e6499a5f1680872184f, type: 3}
+    Icon: {fileID: 2800000, guid: 871ac117536ab9e4cb425501af6c02d2, type: 3}
   - Name: AttackSpeed
-    Icon: {fileID: 2800000, guid: 05c76b6963ef6e6499a5f1680872184f, type: 3}
+    Icon: {fileID: 2800000, guid: 9a5c665a694ca704b9e8488641aec279, type: 3}
   - Name: BulletsUpgrade
-    Icon: {fileID: 2800000, guid: 04059cc7dfb0d614eac94d10382c1ae4, type: 3}
+    Icon: {fileID: 2800000, guid: 517ba51d95a15694883fb29f5fea0794, type: 3}
   - Name: BulletSizeUpgrade
-    Icon: {fileID: 2800000, guid: f02d901b77eff2d48991bb2f5cedd3a4, type: 3}
+    Icon: {fileID: 2800000, guid: 1459edb6b73a61d48a0869572c584128, type: 3}
   - Name: MoveSpeedUpgrade
-    Icon: {fileID: 2800000, guid: a0c60fa7540b6e94a860605df8d66bb5, type: 3}
+    Icon: {fileID: 2800000, guid: 06e392972ab781845a0cdd4be35b4e16, type: 3}

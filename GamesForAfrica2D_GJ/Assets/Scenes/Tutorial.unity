@@ -4264,6 +4264,10 @@ PrefabInstance:
       propertyPath: visuals.FillEnabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4310017466626652070, guid: db2faff79ba10e548bfcb494aed8ea16, type: 3}
+      propertyPath: draggableScrollbar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4901967168924049170, guid: db2faff79ba10e548bfcb494aed8ea16, type: 3}
       propertyPath: layout.Alignment.Y
       value: 1

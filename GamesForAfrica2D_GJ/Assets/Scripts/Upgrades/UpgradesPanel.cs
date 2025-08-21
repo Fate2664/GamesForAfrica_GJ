@@ -1,8 +1,7 @@
 using Nova;
 using UnityEngine;
 using System.Collections.Generic;
-using System;
-using System.Linq;
+
 
 public class UpgradesPanel : MonoBehaviour
 {
@@ -28,7 +27,6 @@ public class UpgradesPanel : MonoBehaviour
     public void AddItemToUpgradeInventory(UpgradeDescription itemDesc, int count = 1)
     {
         var existing = UpgradeItems.Find(x => x.item == itemDesc);
-        //Debug.Log($"Adding item {itemDesc.Name} to upgrade inventory. Existing: {existing != null}");
         if (existing != null)
         {
             existing.count = Mathf.Min(existing.count + count, UpgradeItem.maxCount);
@@ -60,20 +58,13 @@ public class UpgradesPanel : MonoBehaviour
 
         grid.SetSliceProvider(ProvideSlice);
 
-        grid.AddGestureHandler<Gesture.OnHover, UpgradeItemVisuals>(HandleHover);
-        grid.AddGestureHandler<Gesture.OnUnhover, UpgradeItemVisuals>(HandleUnhover);
-        grid.AddGestureHandler<Gesture.OnPress, UpgradeItemVisuals>(HandlePress);
-        grid.AddGestureHandler<Gesture.OnRelease, UpgradeItemVisuals>(HandleRelease);
+        grid.AddGestureHandler<Gesture.OnHover, UpgradeItemVisuals>(UpgradeItemVisuals.HandleHover);
+        grid.AddGestureHandler<Gesture.OnUnhover, UpgradeItemVisuals>(UpgradeItemVisuals.HandleUnhover);
+        grid.AddGestureHandler<Gesture.OnPress, UpgradeItemVisuals>(UpgradeItemVisuals.HandlePress);
+        grid.AddGestureHandler<Gesture.OnRelease, UpgradeItemVisuals>(UpgradeItemVisuals.HandleRelease);
 
         grid.SetDataSource(datasource);
     }
-
-
-    private void HandleRelease(Gesture.OnRelease evt, UpgradeItemVisuals target, int index) => target.Release();
-    private void HandlePress(Gesture.OnPress evt, UpgradeItemVisuals target, int index) => target.Press();
-    private void HandleUnhover(Gesture.OnUnhover evt, UpgradeItemVisuals target, int index) => target.Unhover();
-    private void HandleHover(Gesture.OnHover evt, UpgradeItemVisuals target, int index) => target.Hover();
-
 
     private void ProvideSlice(int sliceIndex, GridView gridview, ref GridSlice2D gridslice)
     {
